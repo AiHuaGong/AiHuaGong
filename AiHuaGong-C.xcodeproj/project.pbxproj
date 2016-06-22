@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		063B4801BDC999C7A910322F /* libPods-AiHuaGong-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9B55BFC8033D8E3AE42344 /* libPods-AiHuaGong-C.a */; };
 		E15711C21D1A3867007B5634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C11D1A3867007B5634 /* main.m */; };
 		E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C41D1A3867007B5634 /* AppDelegate.m */; };
 		E15711C81D1A3867007B5634 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C71D1A3867007B5634 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CEF87CB2873BC8B0444108F /* Pods-AiHuaGong-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiHuaGong-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiHuaGong-C/Pods-AiHuaGong-C.debug.xcconfig"; sourceTree = "<group>"; };
+		6F9B55BFC8033D8E3AE42344 /* libPods-AiHuaGong-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AiHuaGong-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EB1DFAECEFDD26C51F8503C /* Pods-AiHuaGong-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiHuaGong-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiHuaGong-C/Pods-AiHuaGong-C.release.xcconfig"; sourceTree = "<group>"; };
 		E15711BD1D1A3867007B5634 /* AiHuaGong-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AiHuaGong-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15711C11D1A3867007B5634 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E15711C31D1A3867007B5634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063B4801BDC999C7A910322F /* libPods-AiHuaGong-C.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E3EB517F3938C6BFF4DBDE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CEF87CB2873BC8B0444108F /* Pods-AiHuaGong-C.debug.xcconfig */,
+				7EB1DFAECEFDD26C51F8503C /* Pods-AiHuaGong-C.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		794702C900232E926DD58985 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F9B55BFC8033D8E3AE42344 /* libPods-AiHuaGong-C.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E15711B41D1A3867007B5634 = {
 			isa = PBXGroup;
 			children = (
 				E15711BF1D1A3867007B5634 /* AiHuaGong-C */,
 				E15711BE1D1A3867007B5634 /* Products */,
+				2E3EB517F3938C6BFF4DBDE8 /* Pods */,
+				794702C900232E926DD58985 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E15711D41D1A3867007B5634 /* Build configuration list for PBXNativeTarget "AiHuaGong-C" */;
 			buildPhases = (
+				4813F8E60298D9C19D36D15D /* [CP] Check Pods Manifest.lock */,
 				E15711B91D1A3867007B5634 /* Sources */,
 				E15711BA1D1A3867007B5634 /* Frameworks */,
 				E15711BB1D1A3867007B5634 /* Resources */,
+				0293C9E0163DE6DC62E487D4 /* [CP] Embed Pods Frameworks */,
+				BFD1255F5C2CE7F6E67B1296 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0293C9E0163DE6DC62E487D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiHuaGong-C/Pods-AiHuaGong-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4813F8E60298D9C19D36D15D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BFD1255F5C2CE7F6E67B1296 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AiHuaGong-C/Pods-AiHuaGong-C-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E15711B91D1A3867007B5634 /* Sources */ = {
@@ -263,6 +338,7 @@
 		};
 		E15711D51D1A3867007B5634 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CEF87CB2873BC8B0444108F /* Pods-AiHuaGong-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AiHuaGong-C/Info.plist";
@@ -274,6 +350,7 @@
 		};
 		E15711D61D1A3867007B5634 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EB1DFAECEFDD26C51F8503C /* Pods-AiHuaGong-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AiHuaGong-C/Info.plist";
@@ -302,6 +379,7 @@
 				E15711D61D1A3867007B5634 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
