@@ -14,6 +14,11 @@
 		E15711CB1D1A3867007B5634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15711C91D1A3867007B5634 /* Main.storyboard */; };
 		E15711CD1D1A3867007B5634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15711CC1D1A3867007B5634 /* Assets.xcassets */; };
 		E15711D01D1A3867007B5634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15711CE1D1A3867007B5634 /* LaunchScreen.storyboard */; };
+		E15711DF1D1A68C8007B5634 /* AHGShopingCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711DE1D1A68C8007B5634 /* AHGShopingCarViewController.m */; };
+		E15711E21D1A6909007B5634 /* AHGProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711E11D1A6909007B5634 /* AHGProductListViewController.m */; };
+		E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711E51D1A7176007B5634 /* AHGHomeViewController.m */; };
+		E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */; };
+		E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,16 @@
 		E15711CC1D1A3867007B5634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15711CF1D1A3867007B5634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15711D11D1A3867007B5634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E15711DD1D1A68C8007B5634 /* AHGShopingCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGShopingCarViewController.h; sourceTree = "<group>"; };
+		E15711DE1D1A68C8007B5634 /* AHGShopingCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGShopingCarViewController.m; sourceTree = "<group>"; };
+		E15711E01D1A6909007B5634 /* AHGProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGProductListViewController.h; sourceTree = "<group>"; };
+		E15711E11D1A6909007B5634 /* AHGProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGProductListViewController.m; sourceTree = "<group>"; };
+		E15711E41D1A7176007B5634 /* AHGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeViewController.h; sourceTree = "<group>"; };
+		E15711E51D1A7176007B5634 /* AHGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeViewController.m; sourceTree = "<group>"; };
+		E15711E91D1A71BD007B5634 /* AHGTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGTabBarViewController.h; sourceTree = "<group>"; };
+		E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGTabBarViewController.m; sourceTree = "<group>"; };
+		E15711EC1D1A7985007B5634 /* AHGHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeHeaderView.h; sourceTree = "<group>"; };
+		E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeHeaderView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +97,9 @@
 		E15711BF1D1A3867007B5634 /* AiHuaGong-C */ = {
 			isa = PBXGroup;
 			children = (
+				E15711D91D1A673E007B5634 /* shoppingCar */,
+				E15711D81D1A6737007B5634 /* ProductList */,
+				E15711D71D1A672F007B5634 /* Home */,
 				E15711C31D1A3867007B5634 /* AppDelegate.h */,
 				E15711C41D1A3867007B5634 /* AppDelegate.m */,
 				E15711C61D1A3867007B5634 /* ViewController.h */,
@@ -101,6 +119,61 @@
 				E15711C11D1A3867007B5634 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E15711D71D1A672F007B5634 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E15711E31D1A7176007B5634 /* Controllers */,
+				E15711E61D1A7176007B5634 /* Model */,
+				E15711E71D1A7176007B5634 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E15711D81D1A6737007B5634 /* ProductList */ = {
+			isa = PBXGroup;
+			children = (
+				E15711E01D1A6909007B5634 /* AHGProductListViewController.h */,
+				E15711E11D1A6909007B5634 /* AHGProductListViewController.m */,
+			);
+			path = ProductList;
+			sourceTree = "<group>";
+		};
+		E15711D91D1A673E007B5634 /* shoppingCar */ = {
+			isa = PBXGroup;
+			children = (
+				E15711DD1D1A68C8007B5634 /* AHGShopingCarViewController.h */,
+				E15711DE1D1A68C8007B5634 /* AHGShopingCarViewController.m */,
+			);
+			path = shoppingCar;
+			sourceTree = "<group>";
+		};
+		E15711E31D1A7176007B5634 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E15711E41D1A7176007B5634 /* AHGHomeViewController.h */,
+				E15711E51D1A7176007B5634 /* AHGHomeViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E15711E61D1A7176007B5634 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E15711E71D1A7176007B5634 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E15711E91D1A71BD007B5634 /* AHGTabBarViewController.h */,
+				E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */,
+				E15711EC1D1A7985007B5634 /* AHGHomeHeaderView.h */,
+				E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +205,7 @@
 		E15711B51D1A3867007B5634 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = AHG;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = AHG;
 				TargetAttributes = {
@@ -225,8 +299,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15711C81D1A3867007B5634 /* ViewController.m in Sources */,
+				E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */,
 				E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */,
+				E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */,
+				E15711DF1D1A68C8007B5634 /* AHGShopingCarViewController.m in Sources */,
 				E15711C21D1A3867007B5634 /* main.m in Sources */,
+				E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */,
+				E15711E21D1A6909007B5634 /* AHGProductListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,6 @@ target 'AiHuaGong-C' do
 pod 'MBProgressHUD', '~> 0.8'
 pod 'AFNetworking','~> 3.0'
 pod 'SDWebImage', '~>3.7'
-
+pod 'JXBAdPageView'
 
 end
