@@ -1,0 +1,20 @@
+//
+//  PrefixHeader.pch
+//  AiHuaGong-C
+//
+//  Created by ap on 16/6/23.
+//  Copyright © 2016年 AHG. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#ifdef __OBJC__
+
+#import"Utile.h"
+
+
+
+#define BASE_HEADER @"http://192.168.0.116/"
+
+#endif
+#endif /* PrefixHeader_pch */

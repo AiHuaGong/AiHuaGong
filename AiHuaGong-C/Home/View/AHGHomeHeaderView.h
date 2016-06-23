@@ -9,7 +9,7 @@
  *  @param buttonTag tag
  */
 -(void)clickedButtonWithTag:(NSInteger)buttonTag;
-
+-(void)productButtonClicked;
 
 @end
 @interface AHGHomeHeaderView : UIView

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		063B4801BDC999C7A910322F /* libPods-AiHuaGong-C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9B55BFC8033D8E3AE42344 /* libPods-AiHuaGong-C.a */; };
+		E14428491D1B7C590081B78B /* Utile.m in Sources */ = {isa = PBXBuildFile; fileRef = E14428481D1B7C590081B78B /* Utile.m */; };
+		E144284F1D1BE7010081B78B /* BaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E144284C1D1BE7010081B78B /* BaseApi.m */; };
+		E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E14428531D1BE7CA0081B78B /* BaseModel.m */; };
+		E14428571D1BE7DF0081B78B /* AHGHomeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E14428561D1BE7DF0081B78B /* AHGHomeApi.m */; };
 		E15711C21D1A3867007B5634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C11D1A3867007B5634 /* main.m */; };
 		E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C41D1A3867007B5634 /* AppDelegate.m */; };
 		E15711C81D1A3867007B5634 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C71D1A3867007B5634 /* ViewController.m */; };
@@ -25,6 +29,15 @@
 		3CEF87CB2873BC8B0444108F /* Pods-AiHuaGong-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiHuaGong-C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AiHuaGong-C/Pods-AiHuaGong-C.debug.xcconfig"; sourceTree = "<group>"; };
 		6F9B55BFC8033D8E3AE42344 /* libPods-AiHuaGong-C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AiHuaGong-C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB1DFAECEFDD26C51F8503C /* Pods-AiHuaGong-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiHuaGong-C.release.xcconfig"; path = "Pods/Target Support Files/Pods-AiHuaGong-C/Pods-AiHuaGong-C.release.xcconfig"; sourceTree = "<group>"; };
+		E14428471D1B7C590081B78B /* Utile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utile.h; sourceTree = "<group>"; };
+		E14428481D1B7C590081B78B /* Utile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utile.m; sourceTree = "<group>"; };
+		E144284B1D1BE7010081B78B /* BaseApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseApi.h; sourceTree = "<group>"; };
+		E144284C1D1BE7010081B78B /* BaseApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseApi.m; sourceTree = "<group>"; };
+		E14428521D1BE7CA0081B78B /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		E14428531D1BE7CA0081B78B /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		E14428551D1BE7DF0081B78B /* AHGHomeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeApi.h; sourceTree = "<group>"; };
+		E14428561D1BE7DF0081B78B /* AHGHomeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeApi.m; sourceTree = "<group>"; };
+		E14428581D1BEDE70081B78B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E15711BD1D1A3867007B5634 /* AiHuaGong-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AiHuaGong-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15711C11D1A3867007B5634 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E15711C31D1A3867007B5634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -76,6 +89,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E14428461D1B7C590081B78B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E14428471D1B7C590081B78B /* Utile.h */,
+				E14428481D1B7C590081B78B /* Utile.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		E144284A1D1BE61B0081B78B /* HTTPApi */ = {
+			isa = PBXGroup;
+			children = (
+				E14428511D1BE7CA0081B78B /* basemodel */,
+				E144284B1D1BE7010081B78B /* BaseApi.h */,
+				E144284C1D1BE7010081B78B /* BaseApi.m */,
+				E14428551D1BE7DF0081B78B /* AHGHomeApi.h */,
+				E14428561D1BE7DF0081B78B /* AHGHomeApi.m */,
+			);
+			path = HTTPApi;
+			sourceTree = "<group>";
+		};
+		E14428511D1BE7CA0081B78B /* basemodel */ = {
+			isa = PBXGroup;
+			children = (
+				E14428521D1BE7CA0081B78B /* BaseModel.h */,
+				E14428531D1BE7CA0081B78B /* BaseModel.m */,
+			);
+			path = basemodel;
+			sourceTree = "<group>";
+		};
 		E15711B41D1A3867007B5634 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +140,8 @@
 		E15711BF1D1A3867007B5634 /* AiHuaGong-C */ = {
 			isa = PBXGroup;
 			children = (
+				E144284A1D1BE61B0081B78B /* HTTPApi */,
+				E14428461D1B7C590081B78B /* Helper */,
 				E15711D91D1A673E007B5634 /* shoppingCar */,
 				E15711D81D1A6737007B5634 /* ProductList */,
 				E15711D71D1A672F007B5634 /* Home */,
@@ -109,6 +154,7 @@
 				E15711CE1D1A3867007B5634 /* LaunchScreen.storyboard */,
 				E15711D11D1A3867007B5634 /* Info.plist */,
 				E15711C01D1A3867007B5634 /* Supporting Files */,
+				E14428581D1BEDE70081B78B /* PrefixHeader.pch */,
 			);
 			path = "AiHuaGong-C";
 			sourceTree = "<group>";
@@ -300,8 +346,12 @@
 			files = (
 				E15711C81D1A3867007B5634 /* ViewController.m in Sources */,
 				E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */,
+				E14428571D1BE7DF0081B78B /* AHGHomeApi.m in Sources */,
 				E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */,
+				E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */,
+				E14428491D1B7C590081B78B /* Utile.m in Sources */,
 				E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */,
+				E144284F1D1BE7010081B78B /* BaseApi.m in Sources */,
 				E15711DF1D1A68C8007B5634 /* AHGShopingCarViewController.m in Sources */,
 				E15711C21D1A3867007B5634 /* main.m in Sources */,
 				E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */,
@@ -368,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -407,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -420,7 +470,9 @@
 			baseConfigurationReference = 3CEF87CB2873BC8B0444108F /* Pods-AiHuaGong-C.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AiHuaGong-C/PrefixHeader.pch";
 				INFOPLIST_FILE = "AiHuaGong-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aihuagong.AiHuaGong-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -432,7 +484,9 @@
 			baseConfigurationReference = 7EB1DFAECEFDD26C51F8503C /* Pods-AiHuaGong-C.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/AiHuaGong-C/PrefixHeader.pch";
 				INFOPLIST_FILE = "AiHuaGong-C/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.aihuagong.AiHuaGong-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";

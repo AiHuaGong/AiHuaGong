@@ -1,6 +1,7 @@
 
 #import "AHGHomeHeaderView.h"
 #import "JXBAdPageView.h"
+#import "Utile.h"
 @implementation AHGHomeHeaderView
 
 -(id)initWithFrame:(CGRect)frame{
@@ -78,17 +79,52 @@
   buttonview.frame = CGRectMake(0, CGRectGetMaxY(JXView.frame) + margent, CGRectGetWidth(self.frame), CGRectGetMaxY(imageView.frame) + 2);
     
     
-    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Actiondo:)];
-    [tapGesture setNumberOfTouchesRequired:1];
+    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Actiondo)];
+//    [tapGesture setNumberOfTouchesRequired:1];
+    Slabel.userInteractionEnabled = YES;
     [Slabel addGestureRecognizer:tapGesture];
     
+    //推荐供应商页面
+    UIView * shopVIew = [[UIView alloc]init];
+    shopVIew.backgroundColor = [UIColor whiteColor];
+    [self addSubview:shopVIew];
+    shopVIew.frame = CGRectMake(0, CGRectGetMaxY(buttonview.frame) + margent, self.frame.size.width, 50);
+    UIImageView * iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"A-iocn"]];
+    iconView.frame = CGRectMake(margent, 13, 24, 24);
+    [shopVIew addSubview:iconView];
+    UILabel * desLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame), 0, 120, CGRectGetHeight(shopVIew.frame))];
+    desLabel.textAlignment = NSTextAlignmentCenter;
+    desLabel.text = @"供应商推荐";
+    [shopVIew addSubview:desLabel];
+    desLabel.font = [UIFont systemFontOfSize:18];
+    UIButton * bu = [[UIButton alloc]initWithFrame:CGRectMake(self.frame.size.width - 120, 0, 120 - margent, CGRectGetHeight(shopVIew.frame))];
+    [shopVIew addSubview:bu];
+    [bu setTitle:@"我要供货" forState:UIControlStateNormal];
+    bu.titleLabel.font = [UIFont systemFontOfSize:16];
+    [bu setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [bu addTarget:self action:@selector(showProduct) forControlEvents:UIControlEventTouchUpInside];
+    [bu setImage:[UIImage imageNamed:@"my_revise"] forState:UIControlStateNormal];
+    CGFloat labelWidth = [Utile sizeWithString:bu.titleLabel.text font:[UIFont systemFontOfSize:16]].width;
+    CGFloat imageWith = bu.imageView.bounds.size.width;
+    bu.imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth + 15, 0, -labelWidth);
+    bu.titleEdgeInsets = UIEdgeInsetsMake(0, -imageWith, 0, imageWith);
+    
+    self.frame = CGRectMake(0, 0, self.frame.size.width, CGRectGetMaxY(shopVIew.frame)+ margent);
+    
+    
+    
 }
--(void)Actiondo:(id)sender{
+-(void)showProduct{
+    if ([self.delegate respondsToSelector:@selector(productButtonClicked)]) {
+        [self.delegate productButtonClicked];
+    }
+}
+-(void)Actiondo{
     NSLog(@"查看广告");
 }
 
 -(void)buttonClicked:(UIButton*)button{
-    NSLog(@"点击了第%ld个按钮",(long)button.tag);
+//    NSLog(@"点击了第%ld个按钮",(long)button.tag);
     if ([self.delegate respondsToSelector:@selector(clickedButtonWithTag:)]) {
         [self.delegate clickedButtonWithTag:button.tag];
     }
