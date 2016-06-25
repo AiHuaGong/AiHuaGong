@@ -31,9 +31,9 @@
     [product.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_mine_press"]];
     [product.tabBarItem setTitle:@"商品列表"];
     AHGShopingCarViewController * shop = [[AHGShopingCarViewController alloc]init];
-    [shop.tabBarItem setImage:[UIImage imageNamed:@"tab_mine_nor"]];
-    [shop.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_mine_press"]];
-    [shop.tabBarItem setTitle:@"购物车"];
+//    [shop.tabBarItem setImage:[UIImage imageNamed:@"tab_mine_nor"]];
+//    [shop.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_mine_press"]];
+    [shop.tabBarItem setTitle:@""];
     UINavigationController * nav1 = [[UINavigationController alloc]initWithRootViewController:home];
     UINavigationController * nav2 = [[UINavigationController alloc]initWithRootViewController:shop];
     UINavigationController * nav3 = [[UINavigationController alloc]initWithRootViewController:product];

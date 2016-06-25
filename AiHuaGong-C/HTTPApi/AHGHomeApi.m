@@ -15,10 +15,26 @@
 
 @end
 
-@implementation ReShopApi
+@implementation ShopListApi
 
 -(NSString*) getPath{
-    return @"app=recom&act=index" ;
+    return @"app=recom&act=goods_list" ;
+}
+
+
+@end
+@implementation RecondShop
+
+-(NSString*) getPath{
+    return @"app=recom&act=store_recom" ;
+}
+
+@end
+
+@implementation TimeSales
+
+-(NSString*) getPath{
+    return @"app=flash&act=snatch" ;
 }
 
 

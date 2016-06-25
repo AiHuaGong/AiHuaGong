@@ -1,26 +1,39 @@
 
 #import "AHGHomeHeaderView.h"
-#import "JXBAdPageView.h"
 #import "Utile.h"
 @implementation AHGHomeHeaderView
-
--(id)initWithFrame:(CGRect)frame{
+-(id)initWithFrame:(CGRect)frame Array:(NSMutableArray*)arr{
     if (self = [super initWithFrame:frame]) {
         self.frame = frame;
+        self.banArr = arr;
         [self setViewAction];
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     }
     return self;
 }
+- (void)setWebImage:(UIImageView *)imgView imgUrl:(NSString *)imgUrl {
+    [imgView sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
+}
 
 -(void)setViewAction{
-    JXBAdPageView * JXView = [[JXBAdPageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 120)];
-    JXView.iDisplayTime = 2.0;
-    //    JXView.delegate = self;
-    [JXView startAdsWithBlock:@[@"interesting_card",@"interesting_person",@"interesting_card",@"interesting_person"] block:^(NSInteger clickIndex){
-        NSLog(@"%d",(int)clickIndex);
+    _JXView = [[JXBAdPageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 120)];
+    _JXView.iDisplayTime = 2.0;
+    _JXView.contentMode = UIViewContentModeScaleAspectFill;
+    _JXView.delegate = self;
+    _JXView.bWebImage = YES;
+    NSMutableArray * picarray = [NSMutableArray array];
+    for (BanModel * list in _banArr) {
+        NSString * str = [NSString stringWithFormat:@"%@%@",BASE_HEADER,list.ban_src];
+        [picarray addObject:str];
+    }
+    [_JXView startAdsWithBlock:picarray block:^(NSInteger clickIndex){
+        BanModel *model = [_banArr objectAtIndex:clickIndex];
+        if ([self.delegate respondsToSelector:@selector(BannerPicClicked:)]) {
+            [self.delegate BannerPicClicked:model.ban_id];
+        }
+        
     }];
-    [self addSubview:JXView];
+    [self addSubview:_JXView];
     CGFloat margent = 10;
     CGFloat width = 60;
     //类型按钮
@@ -76,7 +89,7 @@
     frame.origin.x = self.frame.size.width;
     Slabel.frame = frame;
     [UIView commitAnimations];
-  buttonview.frame = CGRectMake(0, CGRectGetMaxY(JXView.frame) + margent, CGRectGetWidth(self.frame), CGRectGetMaxY(imageView.frame) + 2);
+  buttonview.frame = CGRectMake(0, CGRectGetMaxY(_JXView.frame) + margent, CGRectGetWidth(self.frame), CGRectGetMaxY(imageView.frame) + 2);
     
     
     UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Actiondo)];
@@ -89,7 +102,7 @@
     shopVIew.backgroundColor = [UIColor whiteColor];
     [self addSubview:shopVIew];
     shopVIew.frame = CGRectMake(0, CGRectGetMaxY(buttonview.frame) + margent, self.frame.size.width, 50);
-    UIImageView * iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"A-iocn"]];
+    UIImageView * iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tab_cool_press"]];
     iconView.frame = CGRectMake(margent, 13, 24, 24);
     [shopVIew addSubview:iconView];
     UILabel * desLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame), 0, 120, CGRectGetHeight(shopVIew.frame))];
@@ -130,9 +143,8 @@
     }
 
 }
-
-//- (void)setWebImage:(UIImageView *)imgView imgUrl:(NSString *)imgUrl {
-//    [imgView sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
-//}
+-(void)dealloc{
+    [_JXView stopAds];
+}
 
 @end

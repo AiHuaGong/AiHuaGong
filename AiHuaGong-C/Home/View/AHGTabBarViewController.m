@@ -7,7 +7,7 @@
 //
 
 #import "AHGTabBarViewController.h"
-
+#import "LZCartViewController.h"
 @interface AHGTabBarViewController ()
 @property(nonatomic,strong)UIButton * bu;
 @end
@@ -18,12 +18,24 @@
     [super viewDidLoad];
     [self setup];
     // Do any additional setup after loading the view.
+    
 }
+//- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+//{
+//    
+//        if ([self.viewControllers indexOfObject:viewController]==1) {
+//            
+//            
+//            return NO;
+//        }
+//    
+//    return YES;
+//}
 
 -(void)setup
 {
     //  添加突出按钮
-    [self addCenterButtonWithImage:[UIImage imageNamed:@"A-iocn"] selectedImage:[UIImage imageNamed:@"tab_cool_nor"]];
+    [self addCenterButtonWithImage:[UIImage imageNamed:@"interesting_card"] selectedImage:[UIImage imageNamed:@"interesting_person"]];
     //  UITabBarControllerDelegate 指定为自己
     self.delegate=self;
     //  指定当前页——中间页
@@ -43,38 +55,37 @@
     [self.bu addTarget:self action:@selector(pressChange:) forControlEvents:UIControlEventTouchUpInside];
     self.bu.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
     //  设定button大小为适应图片
-//    self.bu.frame = CGRectMake(0.0, 0.0, buttonImage.size.width, buttonImage.size.height);
-     self.bu.frame = CGRectMake(self.tabBar.frame.size.width / 2 - 30 , CGRectGetHeight(self.view.frame) - 60, 60, 60);
+    
+     self.bu.frame = CGRectMake(self.tabBar.frame.size.width / 2 - 30 , -11, 60, 60);
     self.bu.clipsToBounds = YES;
     self.bu.layer.cornerRadius = 30;
     self.view.clipsToBounds = NO;
-    [self.bu setBackgroundColor:[UIColor redColor]];
+//    [self.bu setBackgroundColor:[UIColor redColor]];
     [self.bu setImage:buttonImage forState:UIControlStateNormal];
     [self.bu setImage:selectedImage forState:UIControlStateSelected];
     //  这个比较恶心  去掉选中button时候的阴影
     self.bu.adjustsImageWhenHighlighted=NO;
-    
-    
-    /*
-     *  核心代码：设置button的center 和 tabBar的 center 做对齐操作， 同时做出相对的上浮
-     */
-//    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
-//    if (heightDifference < 0)
-//        self.bu.center = self.tabBar.center;
-//    else
-//    {
-//        CGPoint center = self.tabBar.center;
-//        center.y = center.y - heightDifference/2.0;
-//        self.bu.center = center;
-//    }
-//    self.bu.center = self.tabBar.center;
-    [self.view addSubview:self.bu];
+    UIImageView * image = [[UIImageView alloc]init];
+    image.image = buttonImage;
+    image.frame = CGRectMake(self.tabBar.frame.size.width / 2 - 30 , -11, 60, 60);
+//    [self.tabBar addSubview:image];
+    [self.tabBar addSubview:self.bu];
+//    [self.tabBar bringSubviewToFront:self.bu];
+    for (UIView * vi in self.tabBar.subviews) {
+        if ([vi isKindOfClass:NSClassFromString(@"UIButton")]) {
+            [self.tabBar bringSubviewToFront:vi];
+        }
+    }
+
 }
 
 -(void)pressChange:(id)sender
 {
-    self.selectedIndex=1;
+//    self.selectedIndex=1;
     self.bu.selected=YES;
+    LZCartViewController * la = [[LZCartViewController alloc]init];
+    [self presentViewController:la animated:YES completion:nil];
+    
 }
 
 #pragma mark- TabBar Delegate
@@ -83,8 +94,11 @@
 
 - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
 {
+    
     if (self.selectedIndex==1) {
         self.bu.selected=YES;
+        LZCartViewController * la = [[LZCartViewController alloc]init];
+        [self presentViewController:la animated:YES completion:nil];
     }else
     {
         self.bu.selected=NO;

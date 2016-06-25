@@ -11,10 +11,17 @@
 #ifdef __OBJC__
 
 #import"Utile.h"
+#import "BaseApi.h"
+#import "BaseModel.h"
+#import "AHGHomeModel.h"
+#import "AHGHomeApi.h"
+#import "MBProgressHUD.h"
+#import "SDWebImage/UIImageView+WebCache.h"
+#import "SDWebImage/UIButton+WebCache.h"
 
 
 
 #define BASE_HEADER @"http://192.168.0.116/"
-
+#define VIEW_WIDTH [UIScreen mainScreen].applicationFrame.size.width
 #endif
 #endif /* PrefixHeader_pch */

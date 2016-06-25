@@ -3,53 +3,87 @@
 #import "AHGHomeHeaderView.h"
 #import "Utile.h"
 #import "AHGHomeApi.h"
+#import "AHGInfoViewController.h"
+#import "AHGProductDetailTableViewController.h"
+#import "AHGTimeSalesViewController.h"
 @interface AHGHomeViewController ()<AHGHomeHeaderViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>{
     AHGHomeHeaderView * header;
 }
 @property(nonatomic, strong)UISearchDisplayController * searchDisController;
 @property(nonatomic, strong)UISearchBar *searchBar;
 @property(nonatomic, strong)NSMutableArray * disArray;
-//@property(nonatomic, strong)NSMutableArray * disArray;
-//@property (nonatomic, strong) UISearchController *searchController;
+@property(nonatomic, strong)NSMutableArray * BannerArray;//轮播图
+@property(nonatomic, strong)NSMutableArray * ReStoreArray;//推荐商家数组
 @end
 
 @implementation AHGHomeViewController
--(void)getbanners{
-    BannerApi * api = [[BannerApi alloc]init];
+
+-(void)getDataAction{
+     MBProgressHUD * hud = [Utile showHudInView:self.navigationController.view];
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue, ^{
+        // 轮播图接口
+        BannerApi * api = [[BannerApi alloc]init];
+        [api excuteWhithSuccess:^(NSURLSessionDataTask *response, id responseDate) {
+            NSLog(@"得到结果%@",responseDate);
+            for (id key in responseDate) {
+                BanModel* card = [BanModel initWithJSON:key] ;
+                [_BannerArray addObject:card];
+            }
+            dispatch_group_leave(group);
+        } failure:^(NSURLSessionDataTask *response, NSError *error) {
+            [Utile showPromptAlertWithString:error.description];
+             dispatch_group_leave(group);
+        }];
+        
+    });
+    dispatch_group_enter(group);
+    dispatch_group_async(group, queue, ^{
+        //推荐商家接口
+        RecondShop * shop = [[RecondShop alloc]init];
+        [shop excuteWhithSuccess:^(NSURLSessionDataTask *response, id responseDate) {
+            NSLog(@"得到结果%@",responseDate);
+            for (id key in responseDate) {
+                ReShopModel* model = [ReShopModel initWithJSON:key] ;
+                [_ReStoreArray addObject:model];
+            }
+             dispatch_group_leave(group);
+        } failure:^(NSURLSessionDataTask *response, NSError *error) {
+            [Utile showPromptAlertWithString:error.description];
+             dispatch_group_leave(group);
+        }];
+    });
     
-    [api excuteWhithSuccess:^(NSURLSessionDataTask *response, id responseDate) {
-        NSLog(@"得到结果%@",responseDate);
-    } failure:^(NSURLSessionDataTask *response, NSError *error) {
-         NSLog(@"得到结果%@",error);
-    }];
-}
--(void)getShoper{
-    ReShopApi * shop = [[ReShopApi alloc]init];
-    [shop excuteWhithSuccess:^(NSURLSessionDataTask *response, id responseDate) {
-         NSLog(@"得到结果%@",responseDate);
-    } failure:^(NSURLSessionDataTask *response, NSError *error) {
-         NSLog(@"得到结果%@",error);
-    }];
+    // 等待组中的任务执行完毕,回到主线程执行block回调
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        hud.hidden = YES;
+        NSLog(@"数组一————%@ 数组二 ——————%@",_BannerArray,_ReStoreArray);
+        UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"tab_burning_press"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
+        self.navigationItem.leftBarButtonItem = left;
+        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"tab_cool_press"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
+        self.navigationItem.rightBarButtonItem = right;
+        
+        [self setFooterView];
+        CGRect ViewSize = [[UIScreen mainScreen]bounds];
+        header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ViewSize.size.width, 300) Array:_BannerArray];
+        header.delegate = self;
+//        [self searchAction];
+        self.tableView.tableHeaderView = header;
+        
+    });
 
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self getShoper];
-//    [self getbanners];
+    self.tableView.tableFooterView = [UIView new];
+    self.BannerArray = [NSMutableArray array];
+    self.ReStoreArray = [NSMutableArray array];
+    [self getDataAction];
     self.title = @"爱化工平台";
-    CGRect ViewSize = [[UIScreen mainScreen]bounds];
-    header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ViewSize.size.width, 300)];
-    header.delegate = self;
-    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"tab_burning_press"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
-    self.navigationItem.leftBarButtonItem = left;
-     UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"tab_cool_press"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
-    self.navigationItem.rightBarButtonItem = right;
-    self.tableView.scrollsToTop = YES;
-    [self setFooterView];
     self.disArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
-    
-    [self searchAction];
-    self.tableView.tableHeaderView = header;
     
  }
 
@@ -71,44 +105,6 @@
 //    self.tableView.tableHeaderView = self.searchBar;
     
 }
-//#pragma mark UISearchBar and UISearchDisplayController Delegate Methods
-//-(BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
-//    //準備搜尋前，把上面調整的TableView調整回全屏幕的狀態，如果要產生動畫效果，要另外執行animation代碼
-//    return YES;
-//}
-//////点击取消按钮
-//- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
-////   [self.searchBar resignFirstResponder];
-//    
-//}
-//-(BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
-//    //搜尋結束後，恢復原狀，如果要產生動畫效果，要另外執行animation代碼
-//    return YES;
-//}
-//
-//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString{
-//    // Return YES to cause the search result table view to be reloaded.
-//    return YES;
-//}
-//
-//- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption{
-//    // Return YES to cause the search result table view to be reloaded.
-//    return YES;
-//}
-//- (void) searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller{
-//
-//}
-//- (void)searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller{
-//
-//    [self.searchDisController.searchResultsTableView setDelegate:self];
-//    
-//    
-//}
-//
-//- (void)searchDisplayControllerDidEndSearch:(UISearchDisplayController *)controller{
-//    
-//    [self.searchBar resignFirstResponder];
-//}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if ([tableView isEqual: self.searchDisController.searchResultsTableView]) {
@@ -134,7 +130,7 @@
     
 }
 
-
+#pragma marks -AHGHomeHeaderViewDelegate
 -(void)showShopButtonClicked:(UIButton*)bu{
     NSLog(@"点击了第%ld个商家按钮",(long)bu.tag);
 
@@ -143,29 +139,41 @@
 
     NSLog(@"点击了第%ld个文本标签按钮",(long)bu.tag);
 }
-
+-(void)BannerPicClicked:(NSInteger)BannerId{
+    NSLog(@"点击的轮播图id---%ld",(long)BannerId);
+    UIStoryboard *borad = [UIStoryboard storyboardWithName:@"ProDetail" bundle:[NSBundle mainBundle]];
+    AHGProductDetailTableViewController * detail =[borad instantiateViewControllerWithIdentifier:@"AHGProductDetailTableViewController"] ;
+    detail.prouctId = BannerId;
+    detail.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+}
 -(void)setFooterView{
     UIView * footer = [[UIView alloc]init];
     footer.backgroundColor = [UIColor groupTableViewBackgroundColor];
 //    self.tableView.tableFooterView = footer;
     //商家视图
     UIView * baseView = [[UIView alloc]init];
-    baseView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 200);
+//    baseView.frame = CGRectMake(0, 0, self.tableView.frame.size.width, 200);
     [footer addSubview:baseView];
     baseView.backgroundColor = [UIColor whiteColor];
     CGFloat width = (self.tableView.frame.size.width - 16 )/ 3;
-    for (int i = 0; i < 6; i++) {
+
+    for (int i = 0; i < _ReStoreArray.count; i++) {
+        ReShopModel * model = _ReStoreArray[i];
         UIButton * bu = [[UIButton alloc]init];
         [baseView addSubview:bu];
         bu.tag = i;
         [bu setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
         bu.layer.borderWidth = 0.5;
         bu.layer.borderColor = [UIColor lightGrayColor].CGColor;
-        [bu setTitle:@"22" forState:UIControlStateNormal];
+        [bu setTitle:model.store_name forState:UIControlStateNormal];
+//        NSString * url = [NSString stringWithFormat:@"%@%@",BASE_HEADER,model.store_logo];®
+        [bu sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",BASE_HEADER,model.store_logo]] forState:UIControlStateNormal placeholderImage:[UIImage imageNamed:@"interesting_person"]];
         [bu addTarget:self action:@selector(showShopButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
         //        [bu setBackgroundImage:[UIImage imageNamed:@"interesting_person"] forState:UIControlStateNormal];
         UILabel * la = [[UILabel alloc]init];
-        la.text = @"广州爱化工";
+        la.text = model.store_name;
         [baseView addSubview:la];
         la.frame = CGRectMake(8 + i*width, 10+8+ width/2, width, 10);
         la.font = [UIFont systemFontOfSize:11];
@@ -179,7 +187,7 @@
             CGFloat w = 10*2 + 8 + 10 + width/2;
             bu.frame = CGRectMake(8 + (i-3)*width, w, width, width/2);
             la.frame = CGRectMake(8 + (i-3)*width, w + 8 +width/2, width, 10);
-            if (i == 5) {
+            if (i == 4) {
             baseView.frame =CGRectMake(0, 0, self.tableView.frame.size.width, CGRectGetMaxY(la.frame) + 10);
             }
         }
@@ -274,13 +282,21 @@
 -(void)clickedButtonWithTag:(NSInteger)buttonTag{
     switch (buttonTag) {
         case 0:
+        {
+            AHGTimeSalesViewController * time = [[AHGTimeSalesViewController alloc]init];
+            time.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:time animated:YES];
             NSLog(@"抢购");
+        }
             break;
         case 1:
             NSLog(@"商品");
             break;
-        case 2:
+        case 2:{
             NSLog(@"指数");
+            AHGInfoViewController * info = [[AHGInfoViewController alloc]init];
+            [self.navigationController pushViewController:info animated:YES];
+        }
             break;
         case 3:
             NSLog(@"客服");

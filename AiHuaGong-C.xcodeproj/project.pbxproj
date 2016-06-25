@@ -12,17 +12,40 @@
 		E144284F1D1BE7010081B78B /* BaseApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E144284C1D1BE7010081B78B /* BaseApi.m */; };
 		E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E14428531D1BE7CA0081B78B /* BaseModel.m */; };
 		E14428571D1BE7DF0081B78B /* AHGHomeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E14428561D1BE7DF0081B78B /* AHGHomeApi.m */; };
+		E15279D71D1CD6F80072E6B4 /* AHGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15279D61D1CD6F80072E6B4 /* AHGInfoViewController.m */; };
+		E15279DC1D1CD78A0072E6B4 /* AHGInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15279DA1D1CD78A0072E6B4 /* AHGInfoCell.m */; };
+		E15279DD1D1CD78A0072E6B4 /* AHGInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15279DB1D1CD78A0072E6B4 /* AHGInfoCell.xib */; };
+		E15279E01D1CE73E0072E6B4 /* AHGHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E15279DF1D1CE73E0072E6B4 /* AHGHomeModel.m */; };
+		E15279E51D1D14780072E6B4 /* AHGProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15279E31D1D14780072E6B4 /* AHGProductListViewController.m */; };
+		E15279EA1D1D14BE0072E6B4 /* ProDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15279E91D1D14BE0072E6B4 /* ProDetail.storyboard */; };
+		E15279ED1D1D15540072E6B4 /* AHGProductDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15279EC1D1D15540072E6B4 /* AHGProductDetailTableViewController.m */; };
 		E15711C21D1A3867007B5634 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C11D1A3867007B5634 /* main.m */; };
 		E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C41D1A3867007B5634 /* AppDelegate.m */; };
 		E15711C81D1A3867007B5634 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711C71D1A3867007B5634 /* ViewController.m */; };
 		E15711CB1D1A3867007B5634 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15711C91D1A3867007B5634 /* Main.storyboard */; };
 		E15711CD1D1A3867007B5634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15711CC1D1A3867007B5634 /* Assets.xcassets */; };
 		E15711D01D1A3867007B5634 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15711CE1D1A3867007B5634 /* LaunchScreen.storyboard */; };
-		E15711DF1D1A68C8007B5634 /* AHGShopingCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711DE1D1A68C8007B5634 /* AHGShopingCarViewController.m */; };
-		E15711E21D1A6909007B5634 /* AHGProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711E11D1A6909007B5634 /* AHGProductListViewController.m */; };
 		E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711E51D1A7176007B5634 /* AHGHomeViewController.m */; };
 		E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */; };
 		E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */; };
+		E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */; };
+		E16B0EFA1D1E774900F4AFBF /* AHGtimesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EF81D1E774900F4AFBF /* AHGtimesCell.m */; };
+		E16B0EFB1D1E774900F4AFBF /* AHGtimesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16B0EF91D1E774900F4AFBF /* AHGtimesCell.xib */; };
+		E16B0F001D1E95D400F4AFBF /* AHGShopingCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EFE1D1E95D400F4AFBF /* AHGShopingCarViewController.m */; };
+		E16B0F041D1E962800F4AFBF /* AHGCarListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F021D1E962800F4AFBF /* AHGCarListCell.m */; };
+		E16B0F051D1E962800F4AFBF /* AHGCarListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F031D1E962800F4AFBF /* AHGCarListCell.xib */; };
+		E16B0F1D1D1E9DBA00F4AFBF /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F0B1D1E9DBA00F4AFBF /* UIViewExt.m */; };
+		E16B0F1E1D1E9DBA00F4AFBF /* back_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F0D1D1E9DBA00F4AFBF /* back_button@2x.png */; };
+		E16B0F1F1D1E9DBA00F4AFBF /* cart_addBtn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F0E1D1E9DBA00F4AFBF /* cart_addBtn_highlight@2x.png */; };
+		E16B0F201D1E9DBA00F4AFBF /* cart_addBtn_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F0F1D1E9DBA00F4AFBF /* cart_addBtn_nomal@2x.png */; };
+		E16B0F211D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F101D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png */; };
+		E16B0F221D1E9DBA00F4AFBF /* cart_cutBtn_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F111D1E9DBA00F4AFBF /* cart_cutBtn_nomal@2x.png */; };
+		E16B0F231D1E9DBA00F4AFBF /* cart_default_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F121D1E9DBA00F4AFBF /* cart_default_bg.png */; };
+		E16B0F241D1E9DBA00F4AFBF /* cart_selected_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F131D1E9DBA00F4AFBF /* cart_selected_btn@2x.png */; };
+		E16B0F251D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E16B0F141D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png */; };
+		E16B0F261D1E9DBA00F4AFBF /* LZCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F171D1E9DBA00F4AFBF /* LZCartModel.m */; };
+		E16B0F271D1E9DBA00F4AFBF /* LZCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F1A1D1E9DBA00F4AFBF /* LZCartTableViewCell.m */; };
+		E16B0F281D1E9DBA00F4AFBF /* LZCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F1C1D1E9DBA00F4AFBF /* LZCartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +61,18 @@
 		E14428551D1BE7DF0081B78B /* AHGHomeApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeApi.h; sourceTree = "<group>"; };
 		E14428561D1BE7DF0081B78B /* AHGHomeApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeApi.m; sourceTree = "<group>"; };
 		E14428581D1BEDE70081B78B /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E15279D51D1CD6F80072E6B4 /* AHGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGInfoViewController.h; sourceTree = "<group>"; };
+		E15279D61D1CD6F80072E6B4 /* AHGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGInfoViewController.m; sourceTree = "<group>"; };
+		E15279D91D1CD78A0072E6B4 /* AHGInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGInfoCell.h; sourceTree = "<group>"; };
+		E15279DA1D1CD78A0072E6B4 /* AHGInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGInfoCell.m; sourceTree = "<group>"; };
+		E15279DB1D1CD78A0072E6B4 /* AHGInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGInfoCell.xib; sourceTree = "<group>"; };
+		E15279DE1D1CE73E0072E6B4 /* AHGHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeModel.h; sourceTree = "<group>"; };
+		E15279DF1D1CE73E0072E6B4 /* AHGHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeModel.m; sourceTree = "<group>"; };
+		E15279E21D1D14780072E6B4 /* AHGProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGProductListViewController.h; sourceTree = "<group>"; };
+		E15279E31D1D14780072E6B4 /* AHGProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGProductListViewController.m; sourceTree = "<group>"; };
+		E15279E91D1D14BE0072E6B4 /* ProDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ProDetail.storyboard; sourceTree = "<group>"; };
+		E15279EB1D1D15540072E6B4 /* AHGProductDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGProductDetailTableViewController.h; sourceTree = "<group>"; };
+		E15279EC1D1D15540072E6B4 /* AHGProductDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGProductDetailTableViewController.m; sourceTree = "<group>"; };
 		E15711BD1D1A3867007B5634 /* AiHuaGong-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AiHuaGong-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15711C11D1A3867007B5634 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E15711C31D1A3867007B5634 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,16 +83,39 @@
 		E15711CC1D1A3867007B5634 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15711CF1D1A3867007B5634 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15711D11D1A3867007B5634 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E15711DD1D1A68C8007B5634 /* AHGShopingCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGShopingCarViewController.h; sourceTree = "<group>"; };
-		E15711DE1D1A68C8007B5634 /* AHGShopingCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGShopingCarViewController.m; sourceTree = "<group>"; };
-		E15711E01D1A6909007B5634 /* AHGProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGProductListViewController.h; sourceTree = "<group>"; };
-		E15711E11D1A6909007B5634 /* AHGProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGProductListViewController.m; sourceTree = "<group>"; };
 		E15711E41D1A7176007B5634 /* AHGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeViewController.h; sourceTree = "<group>"; };
 		E15711E51D1A7176007B5634 /* AHGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeViewController.m; sourceTree = "<group>"; };
 		E15711E91D1A71BD007B5634 /* AHGTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGTabBarViewController.h; sourceTree = "<group>"; };
 		E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGTabBarViewController.m; sourceTree = "<group>"; };
 		E15711EC1D1A7985007B5634 /* AHGHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeHeaderView.h; sourceTree = "<group>"; };
 		E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeHeaderView.m; sourceTree = "<group>"; };
+		E16B0EF41D1E6FE900F4AFBF /* AHGTimeSalesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGTimeSalesViewController.h; sourceTree = "<group>"; };
+		E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGTimeSalesViewController.m; sourceTree = "<group>"; };
+		E16B0EF71D1E774900F4AFBF /* AHGtimesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGtimesCell.h; sourceTree = "<group>"; };
+		E16B0EF81D1E774900F4AFBF /* AHGtimesCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGtimesCell.m; sourceTree = "<group>"; };
+		E16B0EF91D1E774900F4AFBF /* AHGtimesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGtimesCell.xib; sourceTree = "<group>"; };
+		E16B0EFD1D1E95D400F4AFBF /* AHGShopingCarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGShopingCarViewController.h; sourceTree = "<group>"; };
+		E16B0EFE1D1E95D400F4AFBF /* AHGShopingCarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGShopingCarViewController.m; sourceTree = "<group>"; };
+		E16B0F011D1E962800F4AFBF /* AHGCarListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGCarListCell.h; sourceTree = "<group>"; };
+		E16B0F021D1E962800F4AFBF /* AHGCarListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGCarListCell.m; sourceTree = "<group>"; };
+		E16B0F031D1E962800F4AFBF /* AHGCarListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGCarListCell.xib; sourceTree = "<group>"; };
+		E16B0F091D1E9DBA00F4AFBF /* LZConfigFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZConfigFile.h; sourceTree = "<group>"; };
+		E16B0F0A1D1E9DBA00F4AFBF /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		E16B0F0B1D1E9DBA00F4AFBF /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		E16B0F0D1D1E9DBA00F4AFBF /* back_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button@2x.png"; sourceTree = "<group>"; };
+		E16B0F0E1D1E9DBA00F4AFBF /* cart_addBtn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_addBtn_highlight@2x.png"; sourceTree = "<group>"; };
+		E16B0F0F1D1E9DBA00F4AFBF /* cart_addBtn_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_addBtn_nomal@2x.png"; sourceTree = "<group>"; };
+		E16B0F101D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_cutBtn_highlight@2x.png"; sourceTree = "<group>"; };
+		E16B0F111D1E9DBA00F4AFBF /* cart_cutBtn_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_cutBtn_nomal@2x.png"; sourceTree = "<group>"; };
+		E16B0F121D1E9DBA00F4AFBF /* cart_default_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart_default_bg.png; sourceTree = "<group>"; };
+		E16B0F131D1E9DBA00F4AFBF /* cart_selected_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_selected_btn@2x.png"; sourceTree = "<group>"; };
+		E16B0F141D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cart_unSelect_btn@2x.png"; sourceTree = "<group>"; };
+		E16B0F161D1E9DBA00F4AFBF /* LZCartModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartModel.h; sourceTree = "<group>"; };
+		E16B0F171D1E9DBA00F4AFBF /* LZCartModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartModel.m; sourceTree = "<group>"; };
+		E16B0F191D1E9DBA00F4AFBF /* LZCartTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartTableViewCell.h; sourceTree = "<group>"; };
+		E16B0F1A1D1E9DBA00F4AFBF /* LZCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartTableViewCell.m; sourceTree = "<group>"; };
+		E16B0F1B1D1E9DBA00F4AFBF /* LZCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartViewController.h; sourceTree = "<group>"; };
+		E16B0F1C1D1E9DBA00F4AFBF /* LZCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +150,7 @@
 		E14428461D1B7C590081B78B /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				E16B0F061D1E9DAE00F4AFBF /* Libs */,
 				E14428471D1B7C590081B78B /* Utile.h */,
 				E14428481D1B7C590081B78B /* Utile.m */,
 			);
@@ -115,8 +174,42 @@
 			children = (
 				E14428521D1BE7CA0081B78B /* BaseModel.h */,
 				E14428531D1BE7CA0081B78B /* BaseModel.m */,
+				E15279DE1D1CE73E0072E6B4 /* AHGHomeModel.h */,
+				E15279DF1D1CE73E0072E6B4 /* AHGHomeModel.m */,
 			);
 			path = basemodel;
+			sourceTree = "<group>";
+		};
+		E15279D81D1CD75C0072E6B4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E15279D91D1CD78A0072E6B4 /* AHGInfoCell.h */,
+				E15279DA1D1CD78A0072E6B4 /* AHGInfoCell.m */,
+				E15279DB1D1CD78A0072E6B4 /* AHGInfoCell.xib */,
+				E16B0EF71D1E774900F4AFBF /* AHGtimesCell.h */,
+				E16B0EF81D1E774900F4AFBF /* AHGtimesCell.m */,
+				E16B0EF91D1E774900F4AFBF /* AHGtimesCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E15279E11D1D14780072E6B4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E15279E21D1D14780072E6B4 /* AHGProductListViewController.h */,
+				E15279E31D1D14780072E6B4 /* AHGProductListViewController.m */,
+				E15279EB1D1D15540072E6B4 /* AHGProductDetailTableViewController.h */,
+				E15279EC1D1D15540072E6B4 /* AHGProductDetailTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E15279E41D1D14780072E6B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E15279E91D1D14BE0072E6B4 /* ProDetail.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E15711B41D1A3867007B5634 = {
@@ -180,8 +273,8 @@
 		E15711D81D1A6737007B5634 /* ProductList */ = {
 			isa = PBXGroup;
 			children = (
-				E15711E01D1A6909007B5634 /* AHGProductListViewController.h */,
-				E15711E11D1A6909007B5634 /* AHGProductListViewController.m */,
+				E15279E11D1D14780072E6B4 /* Controller */,
+				E15279E41D1D14780072E6B4 /* View */,
 			);
 			path = ProductList;
 			sourceTree = "<group>";
@@ -189,8 +282,8 @@
 		E15711D91D1A673E007B5634 /* shoppingCar */ = {
 			isa = PBXGroup;
 			children = (
-				E15711DD1D1A68C8007B5634 /* AHGShopingCarViewController.h */,
-				E15711DE1D1A68C8007B5634 /* AHGShopingCarViewController.m */,
+				E16B0EFC1D1E95D400F4AFBF /* controller */,
+				E16B0EFF1D1E95D400F4AFBF /* view */,
 			);
 			path = shoppingCar;
 			sourceTree = "<group>";
@@ -200,6 +293,10 @@
 			children = (
 				E15711E41D1A7176007B5634 /* AHGHomeViewController.h */,
 				E15711E51D1A7176007B5634 /* AHGHomeViewController.m */,
+				E15279D51D1CD6F80072E6B4 /* AHGInfoViewController.h */,
+				E15279D61D1CD6F80072E6B4 /* AHGInfoViewController.m */,
+				E16B0EF41D1E6FE900F4AFBF /* AHGTimeSalesViewController.h */,
+				E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,12 +311,96 @@
 		E15711E71D1A7176007B5634 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E15279D81D1CD75C0072E6B4 /* Cell */,
 				E15711E91D1A71BD007B5634 /* AHGTabBarViewController.h */,
 				E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */,
 				E15711EC1D1A7985007B5634 /* AHGHomeHeaderView.h */,
 				E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E16B0EFC1D1E95D400F4AFBF /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0EFD1D1E95D400F4AFBF /* AHGShopingCarViewController.h */,
+				E16B0EFE1D1E95D400F4AFBF /* AHGShopingCarViewController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		E16B0EFF1D1E95D400F4AFBF /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F011D1E962800F4AFBF /* AHGCarListCell.h */,
+				E16B0F021D1E962800F4AFBF /* AHGCarListCell.m */,
+				E16B0F031D1E962800F4AFBF /* AHGCarListCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E16B0F061D1E9DAE00F4AFBF /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F071D1E9DBA00F4AFBF /* LZCartViewController */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		E16B0F071D1E9DBA00F4AFBF /* LZCartViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F081D1E9DBA00F4AFBF /* ConfigFile */,
+				E16B0F0C1D1E9DBA00F4AFBF /* icons */,
+				E16B0F151D1E9DBA00F4AFBF /* LZCartModel */,
+				E16B0F181D1E9DBA00F4AFBF /* LZCartTableViewCell */,
+				E16B0F1B1D1E9DBA00F4AFBF /* LZCartViewController.h */,
+				E16B0F1C1D1E9DBA00F4AFBF /* LZCartViewController.m */,
+			);
+			path = LZCartViewController;
+			sourceTree = "<group>";
+		};
+		E16B0F081D1E9DBA00F4AFBF /* ConfigFile */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F091D1E9DBA00F4AFBF /* LZConfigFile.h */,
+				E16B0F0A1D1E9DBA00F4AFBF /* UIViewExt.h */,
+				E16B0F0B1D1E9DBA00F4AFBF /* UIViewExt.m */,
+			);
+			path = ConfigFile;
+			sourceTree = "<group>";
+		};
+		E16B0F0C1D1E9DBA00F4AFBF /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F0D1D1E9DBA00F4AFBF /* back_button@2x.png */,
+				E16B0F0E1D1E9DBA00F4AFBF /* cart_addBtn_highlight@2x.png */,
+				E16B0F0F1D1E9DBA00F4AFBF /* cart_addBtn_nomal@2x.png */,
+				E16B0F101D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png */,
+				E16B0F111D1E9DBA00F4AFBF /* cart_cutBtn_nomal@2x.png */,
+				E16B0F121D1E9DBA00F4AFBF /* cart_default_bg.png */,
+				E16B0F131D1E9DBA00F4AFBF /* cart_selected_btn@2x.png */,
+				E16B0F141D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		E16B0F151D1E9DBA00F4AFBF /* LZCartModel */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F161D1E9DBA00F4AFBF /* LZCartModel.h */,
+				E16B0F171D1E9DBA00F4AFBF /* LZCartModel.m */,
+			);
+			path = LZCartModel;
+			sourceTree = "<group>";
+		};
+		E16B0F181D1E9DBA00F4AFBF /* LZCartTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E16B0F191D1E9DBA00F4AFBF /* LZCartTableViewCell.h */,
+				E16B0F1A1D1E9DBA00F4AFBF /* LZCartTableViewCell.m */,
+			);
+			path = LZCartTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,8 +464,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15279DD1D1CD78A0072E6B4 /* AHGInfoCell.xib in Resources */,
+				E16B0F201D1E9DBA00F4AFBF /* cart_addBtn_nomal@2x.png in Resources */,
+				E16B0F051D1E962800F4AFBF /* AHGCarListCell.xib in Resources */,
+				E16B0EFB1D1E774900F4AFBF /* AHGtimesCell.xib in Resources */,
+				E16B0F241D1E9DBA00F4AFBF /* cart_selected_btn@2x.png in Resources */,
+				E16B0F211D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png in Resources */,
+				E16B0F1E1D1E9DBA00F4AFBF /* back_button@2x.png in Resources */,
 				E15711D01D1A3867007B5634 /* LaunchScreen.storyboard in Resources */,
 				E15711CD1D1A3867007B5634 /* Assets.xcassets in Resources */,
+				E16B0F251D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png in Resources */,
+				E16B0F221D1E9DBA00F4AFBF /* cart_cutBtn_nomal@2x.png in Resources */,
+				E16B0F231D1E9DBA00F4AFBF /* cart_default_bg.png in Resources */,
+				E16B0F1F1D1E9DBA00F4AFBF /* cart_addBtn_highlight@2x.png in Resources */,
+				E15279EA1D1D14BE0072E6B4 /* ProDetail.storyboard in Resources */,
 				E15711CB1D1A3867007B5634 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,16 +539,27 @@
 			files = (
 				E15711C81D1A3867007B5634 /* ViewController.m in Sources */,
 				E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */,
+				E15279DC1D1CD78A0072E6B4 /* AHGInfoCell.m in Sources */,
 				E14428571D1BE7DF0081B78B /* AHGHomeApi.m in Sources */,
+				E16B0F281D1E9DBA00F4AFBF /* LZCartViewController.m in Sources */,
+				E15279D71D1CD6F80072E6B4 /* AHGInfoViewController.m in Sources */,
+				E16B0EFA1D1E774900F4AFBF /* AHGtimesCell.m in Sources */,
 				E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */,
+				E16B0F041D1E962800F4AFBF /* AHGCarListCell.m in Sources */,
 				E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */,
 				E14428491D1B7C590081B78B /* Utile.m in Sources */,
+				E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */,
 				E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */,
+				E16B0F1D1D1E9DBA00F4AFBF /* UIViewExt.m in Sources */,
 				E144284F1D1BE7010081B78B /* BaseApi.m in Sources */,
-				E15711DF1D1A68C8007B5634 /* AHGShopingCarViewController.m in Sources */,
+				E15279ED1D1D15540072E6B4 /* AHGProductDetailTableViewController.m in Sources */,
+				E15279E51D1D14780072E6B4 /* AHGProductListViewController.m in Sources */,
 				E15711C21D1A3867007B5634 /* main.m in Sources */,
+				E16B0F271D1E9DBA00F4AFBF /* LZCartTableViewCell.m in Sources */,
+				E16B0F261D1E9DBA00F4AFBF /* LZCartModel.m in Sources */,
 				E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */,
-				E15711E21D1A6909007B5634 /* AHGProductListViewController.m in Sources */,
+				E15279E01D1CE73E0072E6B4 /* AHGHomeModel.m in Sources */,
+				E16B0F001D1E95D400F4AFBF /* AHGShopingCarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
