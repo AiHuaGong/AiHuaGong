@@ -150,8 +150,8 @@
     //显示照片
     UIImageView* imageView = [[UIImageView alloc]init];
     imageView.image = [UIImage imageNamed:@"default_pic_1"];
-    imageView.frame = CGRectMake(imageBgView.left + 5, imageBgView.top + 5, imageBgView.width - 10, imageBgView.height - 10);
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
+    imageView.frame = CGRectMake(imageBgView.left, imageBgView.top, imageBgView.width, imageBgView.height);
+    imageView.contentMode = UIViewContentModeScaleToFill;
     [bgView addSubview:imageView];
     self.lzImageView = imageView;
     

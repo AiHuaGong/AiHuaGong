@@ -47,7 +47,7 @@
         UIButton * bu = [[UIButton alloc]init];
         bu.tag = i;
         [bu addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [bu setTitle:[NSString stringWithFormat:@"%@",arr[i]] forState:UIControlStateNormal];
+        [bu setBackgroundImage: [UIImage imageNamed:[NSString stringWithFormat:@"%@",arr[i]]] forState:UIControlStateNormal];
         [buttonview addSubview:bu];
         bu.frame = CGRectMake(f*(i+1) + width*i, margent, width, width);
         [bu setTintColor:[UIColor blackColor]];
@@ -66,13 +66,13 @@
     label.backgroundColor = [UIColor lightGrayColor];
     [buttonview addSubview:label];
     
-    UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"interesting_person"]];
-    imageView.frame = CGRectMake(0, CGRectGetMinY(label.frame) + 1, 120, 25);
+    UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"化工焦点"]];
+    imageView.frame = CGRectMake(8, CGRectGetMinY(label.frame) + 5, imageView.image.size.width, imageView.image.size.height);
     [buttonview addSubview:imageView];
     //跑马灯label
-    UILabel *Slabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(imageView.frame) + 2 , CGRectGetMinY(imageView.frame), self.frame.size.width - imageView.frame.size.width + 30, 25)];
-    Slabel.font = [UIFont systemFontOfSize:13];
+    UILabel *Slabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(imageView.frame) + 2 , CGRectGetMinY(imageView.frame) - 4, self.frame.size.width - imageView.frame.size.width + 30, 25)];
 //    Slabel.backgroundColor = [UIColor yellowColor];
+    Slabel.font = [UIFont systemFontOfSize:13];
     Slabel.textColor = [UIColor redColor];
     Slabel.text = @"噜啦啦噜啦啦噜啦噜啦噜，噜啦噜啦噜啦噜啦噜啦噜~~~";
     [buttonview addSubview:Slabel];
@@ -102,8 +102,9 @@
     shopVIew.backgroundColor = [UIColor whiteColor];
     [self addSubview:shopVIew];
     shopVIew.frame = CGRectMake(0, CGRectGetMaxY(buttonview.frame) + margent, self.frame.size.width, 50);
-    UIImageView * iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"tab_cool_press"]];
-    iconView.frame = CGRectMake(margent, 13, 24, 24);
+    UIImageView * iconView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"荐"]];
+//    iconView.adjustsImageWhenAncestorFocused = YES;
+    iconView.frame = CGRectMake(margent, 15, 21, 21);
     [shopVIew addSubview:iconView];
     UILabel * desLabel = [[UILabel alloc]initWithFrame:CGRectMake(CGRectGetMaxX(iconView.frame), 0, 120, CGRectGetHeight(shopVIew.frame))];
     desLabel.textAlignment = NSTextAlignmentCenter;
@@ -116,7 +117,7 @@
     bu.titleLabel.font = [UIFont systemFontOfSize:16];
     [bu setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [bu addTarget:self action:@selector(showProduct) forControlEvents:UIControlEventTouchUpInside];
-    [bu setImage:[UIImage imageNamed:@"my_revise"] forState:UIControlStateNormal];
+    [bu setImage:[UIImage imageNamed:@"三角"] forState:UIControlStateNormal];
     CGFloat labelWidth = [Utile sizeWithString:bu.titleLabel.text font:[UIFont systemFontOfSize:16]].width;
     CGFloat imageWith = bu.imageView.bounds.size.width;
     bu.imageEdgeInsets = UIEdgeInsetsMake(0, labelWidth + 15, 0, -labelWidth);

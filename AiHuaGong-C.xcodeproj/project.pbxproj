@@ -28,6 +28,17 @@
 		E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711E51D1A7176007B5634 /* AHGHomeViewController.m */; };
 		E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */; };
 		E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */; };
+		E15B40091D2114FE00AD0BFD /* AHGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B3FFA1D2114FE00AD0BFD /* AHGLoginViewController.m */; };
+		E15B400A1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B3FFD1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.m */; };
+		E15B400B1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B3FFF1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.m */; };
+		E15B400C1D2114FE00AD0BFD /* LoginSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15B40001D2114FE00AD0BFD /* LoginSB.storyboard */; };
+		E15B400D1D2114FE00AD0BFD /* AHGRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40031D2114FE00AD0BFD /* AHGRegisterViewController.m */; };
+		E15B400E1D2114FE00AD0BFD /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40061D2114FE00AD0BFD /* BaseTableViewController.m */; };
+		E15B400F1D2114FE00AD0BFD /* CountDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40081D2114FE00AD0BFD /* CountDownButton.m */; };
+		E15B40121D21170700AD0BFD /* MyInfoSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15B40111D21170700AD0BFD /* MyInfoSB.storyboard */; };
+		E15B40151D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40141D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m */; };
+		E15B40181D21275A00AD0BFD /* AHGChangeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40171D21275A00AD0BFD /* AHGChangeNameViewController.m */; };
+		E15B401B1D21323A00AD0BFD /* AHGChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B401A1D21323A00AD0BFD /* AHGChangePasswordViewController.m */; };
 		E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */; };
 		E16B0EFA1D1E774900F4AFBF /* AHGtimesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EF81D1E774900F4AFBF /* AHGtimesCell.m */; };
 		E16B0EFB1D1E774900F4AFBF /* AHGtimesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16B0EF91D1E774900F4AFBF /* AHGtimesCell.xib */; };
@@ -89,6 +100,26 @@
 		E15711EA1D1A71BD007B5634 /* AHGTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGTabBarViewController.m; sourceTree = "<group>"; };
 		E15711EC1D1A7985007B5634 /* AHGHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHomeHeaderView.h; sourceTree = "<group>"; };
 		E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHomeHeaderView.m; sourceTree = "<group>"; };
+		E15B3FF91D2114FE00AD0BFD /* AHGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGLoginViewController.h; sourceTree = "<group>"; };
+		E15B3FFA1D2114FE00AD0BFD /* AHGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGLoginViewController.m; sourceTree = "<group>"; };
+		E15B3FFC1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGForgetPasswordFirstViewController.h; sourceTree = "<group>"; };
+		E15B3FFD1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGForgetPasswordFirstViewController.m; sourceTree = "<group>"; };
+		E15B3FFE1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGForgetPasswordSecondViewController.h; sourceTree = "<group>"; };
+		E15B3FFF1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGForgetPasswordSecondViewController.m; sourceTree = "<group>"; };
+		E15B40001D2114FE00AD0BFD /* LoginSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginSB.storyboard; sourceTree = "<group>"; };
+		E15B40021D2114FE00AD0BFD /* AHGRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGRegisterViewController.h; sourceTree = "<group>"; };
+		E15B40031D2114FE00AD0BFD /* AHGRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGRegisterViewController.m; sourceTree = "<group>"; };
+		E15B40051D2114FE00AD0BFD /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		E15B40061D2114FE00AD0BFD /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		E15B40071D2114FE00AD0BFD /* CountDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownButton.h; sourceTree = "<group>"; };
+		E15B40081D2114FE00AD0BFD /* CountDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownButton.m; sourceTree = "<group>"; };
+		E15B40111D21170700AD0BFD /* MyInfoSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyInfoSB.storyboard; sourceTree = "<group>"; };
+		E15B40131D211D0A00AD0BFD /* AHGMyInfoCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGMyInfoCenterViewController.h; sourceTree = "<group>"; };
+		E15B40141D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGMyInfoCenterViewController.m; sourceTree = "<group>"; };
+		E15B40161D21275A00AD0BFD /* AHGChangeNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGChangeNameViewController.h; sourceTree = "<group>"; };
+		E15B40171D21275A00AD0BFD /* AHGChangeNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGChangeNameViewController.m; sourceTree = "<group>"; };
+		E15B40191D21323A00AD0BFD /* AHGChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGChangePasswordViewController.h; sourceTree = "<group>"; };
+		E15B401A1D21323A00AD0BFD /* AHGChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGChangePasswordViewController.m; sourceTree = "<group>"; };
 		E16B0EF41D1E6FE900F4AFBF /* AHGTimeSalesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGTimeSalesViewController.h; sourceTree = "<group>"; };
 		E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGTimeSalesViewController.m; sourceTree = "<group>"; };
 		E16B0EF71D1E774900F4AFBF /* AHGtimesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGtimesCell.h; sourceTree = "<group>"; };
@@ -233,6 +264,7 @@
 		E15711BF1D1A3867007B5634 /* AiHuaGong-C */ = {
 			isa = PBXGroup;
 			children = (
+				E15B3FDD1D20CEE400AD0BFD /* Mine */,
 				E144284A1D1BE61B0081B78B /* HTTPApi */,
 				E14428461D1B7C590081B78B /* Helper */,
 				E15711D91D1A673E007B5634 /* shoppingCar */,
@@ -318,6 +350,73 @@
 				E15711ED1D1A7985007B5634 /* AHGHomeHeaderView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E15B3FDD1D20CEE400AD0BFD /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40101D21157B00AD0BFD /* MyInfo */,
+				E15B3FF81D2114FE00AD0BFD /* Login */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		E15B3FF81D2114FE00AD0BFD /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E15B3FF91D2114FE00AD0BFD /* AHGLoginViewController.h */,
+				E15B3FFA1D2114FE00AD0BFD /* AHGLoginViewController.m */,
+				E15B40001D2114FE00AD0BFD /* LoginSB.storyboard */,
+				E15B3FFB1D2114FE00AD0BFD /* forgetPassword */,
+				E15B40011D2114FE00AD0BFD /* register */,
+				E15B40041D2114FE00AD0BFD /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E15B3FFB1D2114FE00AD0BFD /* forgetPassword */ = {
+			isa = PBXGroup;
+			children = (
+				E15B3FFC1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.h */,
+				E15B3FFD1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.m */,
+				E15B3FFE1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.h */,
+				E15B3FFF1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.m */,
+			);
+			path = forgetPassword;
+			sourceTree = "<group>";
+		};
+		E15B40011D2114FE00AD0BFD /* register */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40021D2114FE00AD0BFD /* AHGRegisterViewController.h */,
+				E15B40031D2114FE00AD0BFD /* AHGRegisterViewController.m */,
+			);
+			path = register;
+			sourceTree = "<group>";
+		};
+		E15B40041D2114FE00AD0BFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40051D2114FE00AD0BFD /* BaseTableViewController.h */,
+				E15B40061D2114FE00AD0BFD /* BaseTableViewController.m */,
+				E15B40071D2114FE00AD0BFD /* CountDownButton.h */,
+				E15B40081D2114FE00AD0BFD /* CountDownButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E15B40101D21157B00AD0BFD /* MyInfo */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40111D21170700AD0BFD /* MyInfoSB.storyboard */,
+				E15B40131D211D0A00AD0BFD /* AHGMyInfoCenterViewController.h */,
+				E15B40141D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m */,
+				E15B40161D21275A00AD0BFD /* AHGChangeNameViewController.h */,
+				E15B40171D21275A00AD0BFD /* AHGChangeNameViewController.m */,
+				E15B40191D21323A00AD0BFD /* AHGChangePasswordViewController.h */,
+				E15B401A1D21323A00AD0BFD /* AHGChangePasswordViewController.m */,
+			);
+			path = MyInfo;
 			sourceTree = "<group>";
 		};
 		E16B0EFC1D1E95D400F4AFBF /* controller */ = {
@@ -471,6 +570,8 @@
 				E16B0F241D1E9DBA00F4AFBF /* cart_selected_btn@2x.png in Resources */,
 				E16B0F211D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png in Resources */,
 				E16B0F1E1D1E9DBA00F4AFBF /* back_button@2x.png in Resources */,
+				E15B40121D21170700AD0BFD /* MyInfoSB.storyboard in Resources */,
+				E15B400C1D2114FE00AD0BFD /* LoginSB.storyboard in Resources */,
 				E15711D01D1A3867007B5634 /* LaunchScreen.storyboard in Resources */,
 				E15711CD1D1A3867007B5634 /* Assets.xcassets in Resources */,
 				E16B0F251D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png in Resources */,
@@ -547,19 +648,28 @@
 				E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */,
 				E16B0F041D1E962800F4AFBF /* AHGCarListCell.m in Sources */,
 				E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */,
+				E15B400E1D2114FE00AD0BFD /* BaseTableViewController.m in Sources */,
 				E14428491D1B7C590081B78B /* Utile.m in Sources */,
+				E15B401B1D21323A00AD0BFD /* AHGChangePasswordViewController.m in Sources */,
 				E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */,
 				E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */,
 				E16B0F1D1D1E9DBA00F4AFBF /* UIViewExt.m in Sources */,
+				E15B400F1D2114FE00AD0BFD /* CountDownButton.m in Sources */,
 				E144284F1D1BE7010081B78B /* BaseApi.m in Sources */,
 				E15279ED1D1D15540072E6B4 /* AHGProductDetailTableViewController.m in Sources */,
+				E15B400A1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.m in Sources */,
 				E15279E51D1D14780072E6B4 /* AHGProductListViewController.m in Sources */,
 				E15711C21D1A3867007B5634 /* main.m in Sources */,
 				E16B0F271D1E9DBA00F4AFBF /* LZCartTableViewCell.m in Sources */,
+				E15B40151D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m in Sources */,
+				E15B40091D2114FE00AD0BFD /* AHGLoginViewController.m in Sources */,
 				E16B0F261D1E9DBA00F4AFBF /* LZCartModel.m in Sources */,
 				E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */,
+				E15B400D1D2114FE00AD0BFD /* AHGRegisterViewController.m in Sources */,
+				E15B400B1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.m in Sources */,
 				E15279E01D1CE73E0072E6B4 /* AHGHomeModel.m in Sources */,
 				E16B0F001D1E95D400F4AFBF /* AHGShopingCarViewController.m in Sources */,
+				E15B40181D21275A00AD0BFD /* AHGChangeNameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

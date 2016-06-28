@@ -15,20 +15,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setTabarAction];
-    
+    [self setupNavColor];
     
     return YES;
     
 }
-
+- (void)setupNavColor{
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
+    NSDictionary* textAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+    [[UINavigationBar appearance] setTitleTextAttributes:textAttributes];
+    
+}
 -(void)setTabarAction{
     AHGHomeViewController * home = [[AHGHomeViewController alloc]init];
     [home.tabBarItem setImage:[UIImage imageNamed:@"tab_burning_nor"]];
     [home.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_burning_press"]];
     [home.tabBarItem setTitle:@"爱化工平台"];
     AHGProductListViewController * product = [[AHGProductListViewController alloc]init];
-    [product.tabBarItem setImage:[UIImage imageNamed:@"tab_mine_nor"]];
-    [product.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_mine_press"]];
+    [product.tabBarItem setImage:[UIImage imageNamed:@"list"]];
+    [product.tabBarItem setSelectedImage:[UIImage imageNamed:@"list_select"]];
     [product.tabBarItem setTitle:@"商品列表"];
     AHGShopingCarViewController * shop = [[AHGShopingCarViewController alloc]init];
 //    [shop.tabBarItem setImage:[UIImage imageNamed:@"tab_mine_nor"]];
@@ -38,7 +44,7 @@
     UINavigationController * nav2 = [[UINavigationController alloc]initWithRootViewController:shop];
     UINavigationController * nav3 = [[UINavigationController alloc]initWithRootViewController:product];
     
-    AHGTabBarViewController * tab = [[AHGTabBarViewController alloc]init];
+    AHGTabBarViewController * tab = [AHGTabBarViewController sharedInstance];
     [tab setViewControllers:@[nav1,nav2,nav3]animated:YES];
 //    CGFloat offset = 15.0;
 //    for (UITabBarItem *item in tab.tabBar.items) {

@@ -6,6 +6,9 @@
 #import "AHGInfoViewController.h"
 #import "AHGProductDetailTableViewController.h"
 #import "AHGTimeSalesViewController.h"
+#import "AHGTabBarViewController.h"
+#import "AHGLoginViewController.h"
+#import "AHGMyInfoCenterViewController.h"
 @interface AHGHomeViewController ()<AHGHomeHeaderViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>{
     AHGHomeHeaderView * header;
 }
@@ -60,9 +63,9 @@
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         hud.hidden = YES;
         NSLog(@"数组一————%@ 数组二 ——————%@",_BannerArray,_ReStoreArray);
-        UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"tab_burning_press"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
+        UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"个人中心"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
         self.navigationItem.leftBarButtonItem = left;
-        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"tab_cool_press"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
+        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"拨号"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
         self.navigationItem.rightBarButtonItem = right;
         
         [self setFooterView];
@@ -86,6 +89,11 @@
     self.disArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
     
  }
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[AHGTabBarViewController sharedInstance]changeFromType:@"0"];
+
+}
 
 -(void)searchAction{
     self.definesPresentationContext = YES;
@@ -230,14 +238,21 @@
     }
   // 两个广告的图片
     UIImageView * traImage = [[UIImageView alloc]init];
-    traImage.image = [UIImage imageNamed:@"interesting_person"];
-    traImage.frame = CGRectMake(0, CGRectGetMaxY(textView.frame) + 8, self.tableView.frame.size.width, 140);
+    traImage.image = [UIImage imageNamed:@"transport"];
+    traImage.frame = CGRectMake(0, CGRectGetMaxY(textView.frame) + 8, VIEW_WIDTH,traImage.image.size.height);
     [footer addSubview:traImage];
+    traImage.backgroundColor = [UIColor whiteColor];
+    traImage.contentMode = UIViewContentModeScaleAspectFit;
+    UILabel * line = [[UILabel alloc]initWithFrame:CGRectMake(0, CGRectGetMaxY(traImage.frame), VIEW_WIDTH, 1)];
+    line.backgroundColor = [UIColor lightGrayColor];
+    [footer addSubview:line];
     
     UIImageView * showImage = [[UIImageView alloc]init];
-    showImage.frame = CGRectMake(0, CGRectGetMaxY(traImage.frame) + 8, self.tableView.frame.size.width, 120);
+    showImage.image = [UIImage imageNamed:@"金融"];
+    showImage.frame = CGRectMake(0, CGRectGetMaxY(traImage.frame) + 8, VIEW_WIDTH,showImage.image.size.height);
     [footer addSubview:showImage];
-    showImage.image = [UIImage imageNamed:@"interesting_card"];
+    showImage.contentMode = UIViewContentModeScaleAspectFit;
+    showImage.backgroundColor = [UIColor whiteColor];
     //底部按钮
     
     CGFloat midWidth = self.tableView.frame.size.width / 2;
@@ -313,6 +328,15 @@
 
 -(void)showMyInfo{
     NSLog(@"我的信息");
+    //没登录的时候显示登陆页面
+    //    UIStoryboard *borad = [UIStoryboard storyboardWithName:@"LoginSB" bundle:[NSBundle mainBundle]];
+    //    UINavigationController *loginController =[borad instantiateViewControllerWithIdentifier:@"LoginSB"] ;
+    //    [self.navigationController presentViewController:loginController animated:YES completion:nil] ;
+    
+    UIStoryboard *borad = [UIStoryboard storyboardWithName:@"MyInfoSB" bundle:[NSBundle mainBundle]];
+    AHGMyInfoCenterViewController *myinfo =[borad instantiateViewControllerWithIdentifier:@"AHGMyInfoCenterViewController"] ;
+    myinfo.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:myinfo animated:YES] ;
 }
 -(void)telAction{
     NSLog(@"打电话");

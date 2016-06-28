@@ -11,5 +11,8 @@
 @interface AHGTabBarViewController : UITabBarController<UITabBarControllerDelegate>{
 
 }
-
+@property(nonatomic, strong)NSString * fromType; // 0:首页  1:商品列表  2:其他
++ (instancetype) sharedInstance;
+-(void)changeSelectedState:(NSString*)type;
+-(void)changeFromType:(NSString*)type;
 @end

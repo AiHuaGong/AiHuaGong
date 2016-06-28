@@ -1,6 +1,6 @@
 
 #import "AHGProductListViewController.h"
-
+#import "AHGTabBarViewController.h"
 @interface AHGProductListViewController ()
 
 @end
@@ -12,6 +12,11 @@
     self.title = @"商品分类";
     self.view.backgroundColor = [UIColor whiteColor];
     [self getdataAction];
+}
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [[AHGTabBarViewController sharedInstance]changeFromType:@"1"];
+    
 }
 
 -(void)getdataAction{

@@ -14,6 +14,25 @@
 
 @implementation AHGTabBarViewController
 
+static AHGTabBarViewController * ahgTabbar;
++ (instancetype) sharedInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        ahgTabbar = [[self alloc] init];
+    });
+    return ahgTabbar;
+}
+-(void)changeFromType:(NSString *)type{
+    self.fromType = type;
+}
+-(void)changeSelectedState:(NSString *)type{
+    if ([type isEqualToString:@"0"]) {
+        self.selectedIndex=0;
+    }
+    else{
+        self.selectedIndex=2;
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setup];
@@ -35,7 +54,7 @@
 -(void)setup
 {
     //  添加突出按钮
-    [self addCenterButtonWithImage:[UIImage imageNamed:@"interesting_card"] selectedImage:[UIImage imageNamed:@"interesting_person"]];
+    [self addCenterButtonWithImage:[UIImage imageNamed:@"shoppingCar"] selectedImage:[UIImage imageNamed:@"shoppingCar"]];
     //  UITabBarControllerDelegate 指定为自己
     self.delegate=self;
     //  指定当前页——中间页
@@ -98,6 +117,7 @@
     if (self.selectedIndex==1) {
         self.bu.selected=YES;
         LZCartViewController * la = [[LZCartViewController alloc]init];
+        la.fromType = self.fromType;
         [self presentViewController:la animated:YES completion:nil];
     }else
     {

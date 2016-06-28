@@ -11,5 +11,5 @@
 #import <UIKit/UIKit.h>
 
 @interface LZCartViewController : UIViewController
-
+@property(nonatomic, strong)NSString * fromType;//返回的方式有区别 0:首页, 1商品信息 2:其他
 @end

@@ -12,7 +12,7 @@
 #import "LZConfigFile.h"
 #import "LZCartTableViewCell.h"
 #import "LZCartModel.h"
-
+#import "AHGTabBarViewController.h"
 @interface LZCartViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     BOOL _isHiddenNavigationBarWhenDisappear;//记录当页面消失时是否需要隐藏系统导航
@@ -81,8 +81,9 @@
     _isHasTabBarController = self.tabBarController?YES:NO;
     _isHasNavitationController = self.navigationController?YES:NO;
     
-#warning 模仿请求数据,延迟2s加载数据
-    [self performSelector:@selector(loadData) withObject:nil afterDelay:2];
+//#warning 模仿请求数据,延迟2s加载数据
+//    [self performSelector:@selector(loadData) withObject:nil afterDelay:2];
+    [self loadData];
     
     
     [self setupCustomNavigationBar];
@@ -404,7 +405,13 @@
 #pragma mark --- 返回按钮点击事件
 - (void)backButtonClick:(UIButton*)button {
     if (_isHasNavitationController == NO) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+        if (![self.fromType isEqualToString:@"2"]) {
+            [[AHGTabBarViewController sharedInstance]changeSelectedState:self.fromType];
+        }
+        
+        [self dismissViewControllerAnimated:YES completion:^{
+           
+        }];
     } else {
         [self.navigationController popViewControllerAnimated:YES];
     }
