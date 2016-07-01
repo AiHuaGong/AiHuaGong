@@ -28,30 +28,12 @@
     
 }
 -(void)setTabarAction{
-    AHGHomeViewController * home = [[AHGHomeViewController alloc]init];
-    [home.tabBarItem setImage:[UIImage imageNamed:@"tab_burning_nor"]];
-    [home.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_burning_press"]];
-    [home.tabBarItem setTitle:@"爱化工平台"];
-    AHGProductListViewController * product = [[AHGProductListViewController alloc]init];
-    [product.tabBarItem setImage:[UIImage imageNamed:@"list"]];
-    [product.tabBarItem setSelectedImage:[UIImage imageNamed:@"list_select"]];
-    [product.tabBarItem setTitle:@"商品列表"];
-    AHGShopingCarViewController * shop = [[AHGShopingCarViewController alloc]init];
-//    [shop.tabBarItem setImage:[UIImage imageNamed:@"tab_mine_nor"]];
-//    [shop.tabBarItem setSelectedImage:[UIImage imageNamed:@"tab_mine_press"]];
-    [shop.tabBarItem setTitle:@""];
-    UINavigationController * nav1 = [[UINavigationController alloc]initWithRootViewController:home];
-    UINavigationController * nav2 = [[UINavigationController alloc]initWithRootViewController:shop];
-    UINavigationController * nav3 = [[UINavigationController alloc]initWithRootViewController:product];
     
     AHGTabBarViewController * tab = [AHGTabBarViewController sharedInstance];
-    [tab setViewControllers:@[nav1,nav2,nav3]animated:YES];
-//    CGFloat offset = 15.0;
-//    for (UITabBarItem *item in tab.tabBar.items) {
-//        item.imageInsets = UIEdgeInsetsMake(offset, 0, -offset, 0);
-//    }
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:tab];
     self.window.rootViewController = tab;
-    
+    [self.window makeKeyAndVisible];
+    self.window.backgroundColor = [UIColor whiteColor];
 }
 
 

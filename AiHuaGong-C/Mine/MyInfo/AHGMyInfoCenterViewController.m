@@ -1,13 +1,34 @@
 
 #import "AHGMyInfoCenterViewController.h"
-
+#import "LZCartViewController.h"
+#import "AHGChangeAddressViewController.h"
+#import "AHGAddressHandleViewController.h"
+#import "AHGOrderHomeViewController.h"
 @interface AHGMyInfoCenterViewController ()
 @property (weak, nonatomic) IBOutlet UITableViewCell *changeAddressCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *callUsCell;
+@property (weak, nonatomic) IBOutlet UILabel *changTypeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 
 @end
 
 @implementation AHGMyInfoCenterViewController
+-(void)setLineHeight:(NSString*)address{
 
+    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:address];
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    
+    [paragraphStyle setLineSpacing:10];//调整行间距
+    
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:NSMakeRange(0, [address length])];
+    self.addressLabel.attributedText = attributedString;
+//    [self.view addSubview:label];
+    [self.addressLabel sizeToFit];
+
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIView * view = [[UIView alloc]init];
@@ -20,22 +41,51 @@
     bu.layer.cornerRadius = 5;
     bu.clipsToBounds = YES;
     [bu addTarget:self action:@selector(logoutAction) forControlEvents:UIControlEventTouchUpInside];
-    [view addSubview:bu];
+    [view addSubview:bu]; 
    self.tableView.tableFooterView = view;
+    self.addressLabel.text = @"广东省 广州市 天河区 \n东圃镇东圃樱花路化工城 ";
+    [self setLineHeight:self.addressLabel.text];
+    NSArray * arr = [self.addressLabel.text componentsSeparatedByString:@"\n"];
+    NSLog(@"看看数组：%@  dddd---%@",arr[0],arr[1]);
+    
+    
 }
 -(void)logoutAction{
     NSLog(@"退出登录");
     [self.navigationController popToRootViewControllerAnimated:YES];
 
 }
+//我的订单
+- (IBAction)showMyOrderList:(id)sender {
+    
+    AHGOrderHomeViewController * order = [[AHGOrderHomeViewController alloc]init];
+    [self.navigationController pushViewController:order animated:YES];
+}
+//购物车
+- (IBAction)showMyShoppingCar:(id)sender {
+    LZCartViewController * la = [[LZCartViewController alloc]init];
+    la.fromType = @"2";
+    [self presentViewController:la animated:YES completion:nil];
+    
+}
+
+
+#pragma marks - TableViewDelegate / dataSource
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 30;
 
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIStoryboard *borad = [UIStoryboard storyboardWithName:@"MyInfoSB" bundle:[NSBundle mainBundle]];
     if (cell == _changeAddressCell) {
         NSLog(@"dadad ");
+        AHGChangeAddressViewController *change =[borad instantiateViewControllerWithIdentifier:@"AHGChangeAddressViewController"] ;
+        [self.navigationController pushViewController:change animated:YES];
+    }
+    else if (cell == _callUsCell){
+        [Utile telActionWithPhoneNumber:@"020-29842873"];
+    
     }
 
 }
@@ -68,5 +118,7 @@
 }
 -(void)handleAddress{
     NSLog(@"去管理地址");
+    AHGAddressHandleViewController * address = [[AHGAddressHandleViewController alloc]init];
+    [self.navigationController pushViewController:address animated:YES];
 }
 @end

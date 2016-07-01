@@ -22,7 +22,7 @@
 @implementation AHGHomeViewController
 
 -(void)getDataAction{
-     MBProgressHUD * hud = [Utile showHudInView:self.navigationController.view];
+     MBProgressHUD * hud = [Utile showHudInView:self.view];
     dispatch_group_t group = dispatch_group_create();
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_group_enter(group);
@@ -67,13 +67,16 @@
         self.navigationItem.leftBarButtonItem = left;
         UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"拨号"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
         self.navigationItem.rightBarButtonItem = right;
-        
-        [self setFooterView];
+        if (_ReStoreArray.count > 0) {
+           [self setFooterView];
+        }
         CGRect ViewSize = [[UIScreen mainScreen]bounds];
-        header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ViewSize.size.width, 300) Array:_BannerArray];
-        header.delegate = self;
-//        [self searchAction];
-        self.tableView.tableHeaderView = header;
+        if (_BannerArray.count > 0) {
+            header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ViewSize.size.width, 300) Array:_BannerArray];
+            header.delegate = self;
+            //        [self searchAction];
+            self.tableView.tableHeaderView = header;
+        }
         
     });
 
@@ -92,7 +95,12 @@
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [[AHGTabBarViewController sharedInstance]changeFromType:@"0"];
+//    [[AHGTabBarViewController sharedInstance]addCenterButtonWithImage];
 
+}
+-(void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+//    [[AHGTabBarViewController sharedInstance]hideButtonAction:YES];
 }
 
 -(void)searchAction{
@@ -310,6 +318,7 @@
         case 2:{
             NSLog(@"指数");
             AHGInfoViewController * info = [[AHGInfoViewController alloc]init];
+            info.hidesBottomBarWhenPushed = YES;
             [self.navigationController pushViewController:info animated:YES];
         }
             break;

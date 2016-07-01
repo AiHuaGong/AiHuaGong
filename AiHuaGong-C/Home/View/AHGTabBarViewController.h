@@ -15,4 +15,8 @@
 + (instancetype) sharedInstance;
 -(void)changeSelectedState:(NSString*)type;
 -(void)changeFromType:(NSString*)type;
+
+-(void)addCenterButtonWithImage;
+-(void)hideButtonAction:(BOOL)bol;
+- (void)addCenterButtonWithImage:(UIImage *)buttonImage highlightImage:(UIImage *)highlightImage;
 @end

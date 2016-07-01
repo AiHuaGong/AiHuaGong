@@ -1,9 +1,11 @@
 
 #import "AHGProductDetailTableViewController.h"
+#import "AHGFillOrderViewController.h"
 
 @interface AHGProductDetailTableViewController (){
     NSInteger ViewY;
     UIButton* takeCardButton;
+    UITextField * countField;
 }
 @property (weak, nonatomic) IBOutlet UIView *headerview;
 @property (weak, nonatomic) IBOutlet UIImageView *PicImageView;
@@ -21,17 +23,65 @@
 @property (weak, nonatomic) IBOutlet UILabel *storeCountLabel;
 @property(nonatomic, strong)UIView *FooterView;
 @property (nonatomic) CGFloat height;//headerView 高
+@property(nonatomic) NSInteger productCount;//采购数
 @end
 @implementation AHGProductDetailTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.productCount = 1;
     [self setFooterAction];
     [self creatFooterView];
+    [self setCountViewAction];
+    
+    
 }
+-(void)setCountViewAction{
+    UIButton * off = [[UIButton alloc]init];
+    [off setImage:[UIImage imageNamed:@"cart_cutBtn_nomal"] forState:UIControlStateNormal];
+    off.frame = CGRectMake(5, 0, 30, 30);
+    [self.countView addSubview:off];
+    off.tag = 1;
+    [off addTarget:self action:@selector(countAction:) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton * add = [[UIButton alloc]init];
+    [add setImage:[UIImage imageNamed:@"cart_addBtn_nomal"] forState:UIControlStateNormal];
+    add.frame = CGRectMake(55, 0, 30, 30);
+    [self.countView addSubview:add];
+    add.tag = 2;
+    [add addTarget:self action:@selector(countAction:) forControlEvents:UIControlEventTouchUpInside];
+    //数量
+    countField= [[UITextField alloc]initWithFrame:CGRectMake(35, 0, 20, 30)];
+    countField.text = [NSString stringWithFormat:@"%ld",(long)_productCount];
+    countField.font = [UIFont systemFontOfSize:15];
+    countField.borderStyle = UITextBorderStyleNone;
+    [self.countView addSubview:countField];
+    countField.textAlignment = NSTextAlignmentCenter;
+    
+}
+-(void)countAction:(UIButton*)bu{
+    if (bu.tag == 1) {
+        //减
+        if (self.productCount > 1) {
+            self.productCount--;
+            countField.text = [NSString stringWithFormat:@"%ld",(long)_productCount];
+        }
+        
+    }
+    else{
+        //add
+        self.productCount++;
+        countField.text = [NSString stringWithFormat:@"%ld",(long)_productCount];
+    }
+
+
+}
+
 //立即购买
 -(void)buyNowAction{
-
+    UIStoryboard *borad = [UIStoryboard storyboardWithName:@"ProDetail" bundle:[NSBundle mainBundle]];
+    AHGFillOrderViewController *fill =[borad instantiateViewControllerWithIdentifier:@"AHGFillOrderViewController"] ;
+    [self.navigationController pushViewController:fill animated:YES] ;
 
 }
 //加入购物车

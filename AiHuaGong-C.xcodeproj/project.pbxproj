@@ -39,6 +39,29 @@
 		E15B40151D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40141D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m */; };
 		E15B40181D21275A00AD0BFD /* AHGChangeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40171D21275A00AD0BFD /* AHGChangeNameViewController.m */; };
 		E15B401B1D21323A00AD0BFD /* AHGChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B401A1D21323A00AD0BFD /* AHGChangePasswordViewController.m */; };
+		E15B402E1D2245EB00AD0BFD /* AHGChangeAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B402D1D2245EB00AD0BFD /* AHGChangeAddressViewController.m */; };
+		E15B40331D224D5400AD0BFD /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = E15B40301D224D5400AD0BFD /* area.plist */; };
+		E15B40341D224D5400AD0BFD /* LZXPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40321D224D5400AD0BFD /* LZXPickerView.m */; };
+		E15B40371D2267D700AD0BFD /* AHGAddressHandleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40361D2267D700AD0BFD /* AHGAddressHandleViewController.m */; };
+		E15B403B1D2267FA00AD0BFD /* AHGHandleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40391D2267FA00AD0BFD /* AHGHandleCell.m */; };
+		E15B403C1D2267FA00AD0BFD /* AHGHandleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15B403A1D2267FA00AD0BFD /* AHGHandleCell.xib */; };
+		E15B40441D24FCDF00AD0BFD /* b1.png in Resources */ = {isa = PBXBuildFile; fileRef = E15B403F1D24FCDF00AD0BFD /* b1.png */; };
+		E15B40451D24FCDF00AD0BFD /* SlideHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40411D24FCDF00AD0BFD /* SlideHeadView.m */; };
+		E15B40461D24FCDF00AD0BFD /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40431D24FCDF00AD0BFD /* UIView+Extension.m */; };
+		E15B40491D24FF0C00AD0BFD /* AHGOrderHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40481D24FF0C00AD0BFD /* AHGOrderHomeViewController.m */; };
+		E15B404C1D24FF4700AD0BFD /* AHGOrderAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B404B1D24FF4700AD0BFD /* AHGOrderAllViewController.m */; };
+		E15B404F1D24FF8000AD0BFD /* AHGOrderStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B404E1D24FF8000AD0BFD /* AHGOrderStatusViewController.m */; };
+		E15B40521D25038000AD0BFD /* AHGOrderFinishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40511D25038000AD0BFD /* AHGOrderFinishViewController.m */; };
+		E15B40571D2506D000AD0BFD /* AHGOrderAllCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40551D2506D000AD0BFD /* AHGOrderAllCell.m */; };
+		E15B40581D2506D000AD0BFD /* AHGOrderAllCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15B40561D2506D000AD0BFD /* AHGOrderAllCell.xib */; };
+		E15B405C1D251FFB00AD0BFD /* AHGOrderStatusCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B405A1D251FFB00AD0BFD /* AHGOrderStatusCell.m */; };
+		E15B405D1D251FFB00AD0BFD /* AHGOrderStatusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15B405B1D251FFB00AD0BFD /* AHGOrderStatusCell.xib */; };
+		E15B40601D252D1200AD0BFD /* AHGOrderFinishCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B405F1D252D1200AD0BFD /* AHGOrderFinishCell.m */; };
+		E15B40621D252D4900AD0BFD /* AHGOrderFinishCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15B40611D252D4900AD0BFD /* AHGOrderFinishCell.xib */; };
+		E15B40651D264EC500AD0BFD /* AHGFillOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40641D264EC500AD0BFD /* AHGFillOrderViewController.m */; };
+		E15B40681D265D3900AD0BFD /* AHGorderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B40671D265D3900AD0BFD /* AHGorderListCell.m */; };
+		E15B406B1D265E6C00AD0BFD /* AHGOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B406A1D265E6C00AD0BFD /* AHGOrderListViewController.m */; };
+		E15B406E1D2663C400AD0BFD /* AHGPayStyleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E15B406D1D2663C400AD0BFD /* AHGPayStyleViewController.m */; };
 		E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */; };
 		E16B0EFA1D1E774900F4AFBF /* AHGtimesCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0EF81D1E774900F4AFBF /* AHGtimesCell.m */; };
 		E16B0EFB1D1E774900F4AFBF /* AHGtimesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E16B0EF91D1E774900F4AFBF /* AHGtimesCell.xib */; };
@@ -120,6 +143,46 @@
 		E15B40171D21275A00AD0BFD /* AHGChangeNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGChangeNameViewController.m; sourceTree = "<group>"; };
 		E15B40191D21323A00AD0BFD /* AHGChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGChangePasswordViewController.h; sourceTree = "<group>"; };
 		E15B401A1D21323A00AD0BFD /* AHGChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGChangePasswordViewController.m; sourceTree = "<group>"; };
+		E15B402C1D2245EB00AD0BFD /* AHGChangeAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGChangeAddressViewController.h; sourceTree = "<group>"; };
+		E15B402D1D2245EB00AD0BFD /* AHGChangeAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGChangeAddressViewController.m; sourceTree = "<group>"; };
+		E15B40301D224D5400AD0BFD /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		E15B40311D224D5400AD0BFD /* LZXPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZXPickerView.h; sourceTree = "<group>"; };
+		E15B40321D224D5400AD0BFD /* LZXPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZXPickerView.m; sourceTree = "<group>"; };
+		E15B40351D2267D700AD0BFD /* AHGAddressHandleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGAddressHandleViewController.h; sourceTree = "<group>"; };
+		E15B40361D2267D700AD0BFD /* AHGAddressHandleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGAddressHandleViewController.m; sourceTree = "<group>"; };
+		E15B40381D2267FA00AD0BFD /* AHGHandleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGHandleCell.h; sourceTree = "<group>"; };
+		E15B40391D2267FA00AD0BFD /* AHGHandleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGHandleCell.m; sourceTree = "<group>"; };
+		E15B403A1D2267FA00AD0BFD /* AHGHandleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGHandleCell.xib; sourceTree = "<group>"; };
+		E15B403F1D24FCDF00AD0BFD /* b1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b1.png; sourceTree = "<group>"; };
+		E15B40401D24FCDF00AD0BFD /* SlideHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideHeadView.h; sourceTree = "<group>"; };
+		E15B40411D24FCDF00AD0BFD /* SlideHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideHeadView.m; sourceTree = "<group>"; };
+		E15B40421D24FCDF00AD0BFD /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		E15B40431D24FCDF00AD0BFD /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		E15B40471D24FF0C00AD0BFD /* AHGOrderHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderHomeViewController.h; sourceTree = "<group>"; };
+		E15B40481D24FF0C00AD0BFD /* AHGOrderHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderHomeViewController.m; sourceTree = "<group>"; };
+		E15B404A1D24FF4700AD0BFD /* AHGOrderAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderAllViewController.h; sourceTree = "<group>"; };
+		E15B404B1D24FF4700AD0BFD /* AHGOrderAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderAllViewController.m; sourceTree = "<group>"; };
+		E15B404D1D24FF8000AD0BFD /* AHGOrderStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderStatusViewController.h; sourceTree = "<group>"; };
+		E15B404E1D24FF8000AD0BFD /* AHGOrderStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderStatusViewController.m; sourceTree = "<group>"; };
+		E15B40501D25038000AD0BFD /* AHGOrderFinishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderFinishViewController.h; sourceTree = "<group>"; };
+		E15B40511D25038000AD0BFD /* AHGOrderFinishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderFinishViewController.m; sourceTree = "<group>"; };
+		E15B40541D2506D000AD0BFD /* AHGOrderAllCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderAllCell.h; sourceTree = "<group>"; };
+		E15B40551D2506D000AD0BFD /* AHGOrderAllCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderAllCell.m; sourceTree = "<group>"; };
+		E15B40561D2506D000AD0BFD /* AHGOrderAllCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGOrderAllCell.xib; sourceTree = "<group>"; };
+		E15B40591D251FFB00AD0BFD /* AHGOrderStatusCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderStatusCell.h; sourceTree = "<group>"; };
+		E15B405A1D251FFB00AD0BFD /* AHGOrderStatusCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderStatusCell.m; sourceTree = "<group>"; };
+		E15B405B1D251FFB00AD0BFD /* AHGOrderStatusCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGOrderStatusCell.xib; sourceTree = "<group>"; };
+		E15B405E1D252D1200AD0BFD /* AHGOrderFinishCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderFinishCell.h; sourceTree = "<group>"; };
+		E15B405F1D252D1200AD0BFD /* AHGOrderFinishCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderFinishCell.m; sourceTree = "<group>"; };
+		E15B40611D252D4900AD0BFD /* AHGOrderFinishCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AHGOrderFinishCell.xib; sourceTree = "<group>"; };
+		E15B40631D264EC500AD0BFD /* AHGFillOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGFillOrderViewController.h; sourceTree = "<group>"; };
+		E15B40641D264EC500AD0BFD /* AHGFillOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGFillOrderViewController.m; sourceTree = "<group>"; };
+		E15B40661D265D3900AD0BFD /* AHGorderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGorderListCell.h; sourceTree = "<group>"; };
+		E15B40671D265D3900AD0BFD /* AHGorderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGorderListCell.m; sourceTree = "<group>"; };
+		E15B40691D265E6C00AD0BFD /* AHGOrderListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGOrderListViewController.h; sourceTree = "<group>"; };
+		E15B406A1D265E6C00AD0BFD /* AHGOrderListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGOrderListViewController.m; sourceTree = "<group>"; };
+		E15B406C1D2663C400AD0BFD /* AHGPayStyleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGPayStyleViewController.h; sourceTree = "<group>"; };
+		E15B406D1D2663C400AD0BFD /* AHGPayStyleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGPayStyleViewController.m; sourceTree = "<group>"; };
 		E16B0EF41D1E6FE900F4AFBF /* AHGTimeSalesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGTimeSalesViewController.h; sourceTree = "<group>"; };
 		E16B0EF51D1E6FE900F4AFBF /* AHGTimeSalesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGTimeSalesViewController.m; sourceTree = "<group>"; };
 		E16B0EF71D1E774900F4AFBF /* AHGtimesCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGtimesCell.h; sourceTree = "<group>"; };
@@ -231,6 +294,12 @@
 				E15279E31D1D14780072E6B4 /* AHGProductListViewController.m */,
 				E15279EB1D1D15540072E6B4 /* AHGProductDetailTableViewController.h */,
 				E15279EC1D1D15540072E6B4 /* AHGProductDetailTableViewController.m */,
+				E15B40631D264EC500AD0BFD /* AHGFillOrderViewController.h */,
+				E15B40641D264EC500AD0BFD /* AHGFillOrderViewController.m */,
+				E15B40691D265E6C00AD0BFD /* AHGOrderListViewController.h */,
+				E15B406A1D265E6C00AD0BFD /* AHGOrderListViewController.m */,
+				E15B406C1D2663C400AD0BFD /* AHGPayStyleViewController.h */,
+				E15B406D1D2663C400AD0BFD /* AHGPayStyleViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -239,6 +308,8 @@
 			isa = PBXGroup;
 			children = (
 				E15279E91D1D14BE0072E6B4 /* ProDetail.storyboard */,
+				E15B40661D265D3900AD0BFD /* AHGorderListCell.h */,
+				E15B40671D265D3900AD0BFD /* AHGorderListCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -408,6 +479,8 @@
 		E15B40101D21157B00AD0BFD /* MyInfo */ = {
 			isa = PBXGroup;
 			children = (
+				E15B403D1D24FBD600AD0BFD /* MyOrder */,
+				E15B402B1D2245D300AD0BFD /* Address */,
 				E15B40111D21170700AD0BFD /* MyInfoSB.storyboard */,
 				E15B40131D211D0A00AD0BFD /* AHGMyInfoCenterViewController.h */,
 				E15B40141D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m */,
@@ -417,6 +490,76 @@
 				E15B401A1D21323A00AD0BFD /* AHGChangePasswordViewController.m */,
 			);
 			path = MyInfo;
+			sourceTree = "<group>";
+		};
+		E15B402B1D2245D300AD0BFD /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				E15B402F1D224D5400AD0BFD /* view */,
+				E15B402C1D2245EB00AD0BFD /* AHGChangeAddressViewController.h */,
+				E15B402D1D2245EB00AD0BFD /* AHGChangeAddressViewController.m */,
+				E15B40351D2267D700AD0BFD /* AHGAddressHandleViewController.h */,
+				E15B40361D2267D700AD0BFD /* AHGAddressHandleViewController.m */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
+		E15B402F1D224D5400AD0BFD /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40301D224D5400AD0BFD /* area.plist */,
+				E15B40311D224D5400AD0BFD /* LZXPickerView.h */,
+				E15B40321D224D5400AD0BFD /* LZXPickerView.m */,
+				E15B40381D2267FA00AD0BFD /* AHGHandleCell.h */,
+				E15B40391D2267FA00AD0BFD /* AHGHandleCell.m */,
+				E15B403A1D2267FA00AD0BFD /* AHGHandleCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		E15B403D1D24FBD600AD0BFD /* MyOrder */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40531D25069F00AD0BFD /* Views */,
+				E15B403E1D24FCDF00AD0BFD /* SlideNavClass */,
+				E15B40471D24FF0C00AD0BFD /* AHGOrderHomeViewController.h */,
+				E15B40481D24FF0C00AD0BFD /* AHGOrderHomeViewController.m */,
+				E15B404A1D24FF4700AD0BFD /* AHGOrderAllViewController.h */,
+				E15B404B1D24FF4700AD0BFD /* AHGOrderAllViewController.m */,
+				E15B404D1D24FF8000AD0BFD /* AHGOrderStatusViewController.h */,
+				E15B404E1D24FF8000AD0BFD /* AHGOrderStatusViewController.m */,
+				E15B40501D25038000AD0BFD /* AHGOrderFinishViewController.h */,
+				E15B40511D25038000AD0BFD /* AHGOrderFinishViewController.m */,
+			);
+			path = MyOrder;
+			sourceTree = "<group>";
+		};
+		E15B403E1D24FCDF00AD0BFD /* SlideNavClass */ = {
+			isa = PBXGroup;
+			children = (
+				E15B403F1D24FCDF00AD0BFD /* b1.png */,
+				E15B40401D24FCDF00AD0BFD /* SlideHeadView.h */,
+				E15B40411D24FCDF00AD0BFD /* SlideHeadView.m */,
+				E15B40421D24FCDF00AD0BFD /* UIView+Extension.h */,
+				E15B40431D24FCDF00AD0BFD /* UIView+Extension.m */,
+			);
+			path = SlideNavClass;
+			sourceTree = "<group>";
+		};
+		E15B40531D25069F00AD0BFD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E15B40541D2506D000AD0BFD /* AHGOrderAllCell.h */,
+				E15B40551D2506D000AD0BFD /* AHGOrderAllCell.m */,
+				E15B40561D2506D000AD0BFD /* AHGOrderAllCell.xib */,
+				E15B40591D251FFB00AD0BFD /* AHGOrderStatusCell.h */,
+				E15B405A1D251FFB00AD0BFD /* AHGOrderStatusCell.m */,
+				E15B405B1D251FFB00AD0BFD /* AHGOrderStatusCell.xib */,
+				E15B405E1D252D1200AD0BFD /* AHGOrderFinishCell.h */,
+				E15B405F1D252D1200AD0BFD /* AHGOrderFinishCell.m */,
+				E15B40611D252D4900AD0BFD /* AHGOrderFinishCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		E16B0EFC1D1E95D400F4AFBF /* controller */ = {
@@ -563,23 +706,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15B40441D24FCDF00AD0BFD /* b1.png in Resources */,
 				E15279DD1D1CD78A0072E6B4 /* AHGInfoCell.xib in Resources */,
 				E16B0F201D1E9DBA00F4AFBF /* cart_addBtn_nomal@2x.png in Resources */,
 				E16B0F051D1E962800F4AFBF /* AHGCarListCell.xib in Resources */,
 				E16B0EFB1D1E774900F4AFBF /* AHGtimesCell.xib in Resources */,
 				E16B0F241D1E9DBA00F4AFBF /* cart_selected_btn@2x.png in Resources */,
+				E15B40581D2506D000AD0BFD /* AHGOrderAllCell.xib in Resources */,
 				E16B0F211D1E9DBA00F4AFBF /* cart_cutBtn_highlight@2x.png in Resources */,
 				E16B0F1E1D1E9DBA00F4AFBF /* back_button@2x.png in Resources */,
 				E15B40121D21170700AD0BFD /* MyInfoSB.storyboard in Resources */,
 				E15B400C1D2114FE00AD0BFD /* LoginSB.storyboard in Resources */,
 				E15711D01D1A3867007B5634 /* LaunchScreen.storyboard in Resources */,
 				E15711CD1D1A3867007B5634 /* Assets.xcassets in Resources */,
+				E15B405D1D251FFB00AD0BFD /* AHGOrderStatusCell.xib in Resources */,
 				E16B0F251D1E9DBA00F4AFBF /* cart_unSelect_btn@2x.png in Resources */,
 				E16B0F221D1E9DBA00F4AFBF /* cart_cutBtn_nomal@2x.png in Resources */,
+				E15B40621D252D4900AD0BFD /* AHGOrderFinishCell.xib in Resources */,
 				E16B0F231D1E9DBA00F4AFBF /* cart_default_bg.png in Resources */,
+				E15B403C1D2267FA00AD0BFD /* AHGHandleCell.xib in Resources */,
 				E16B0F1F1D1E9DBA00F4AFBF /* cart_addBtn_highlight@2x.png in Resources */,
 				E15279EA1D1D14BE0072E6B4 /* ProDetail.storyboard in Resources */,
 				E15711CB1D1A3867007B5634 /* Main.storyboard in Resources */,
+				E15B40331D224D5400AD0BFD /* area.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,33 +790,50 @@
 				E15711C81D1A3867007B5634 /* ViewController.m in Sources */,
 				E15711EB1D1A71BD007B5634 /* AHGTabBarViewController.m in Sources */,
 				E15279DC1D1CD78A0072E6B4 /* AHGInfoCell.m in Sources */,
+				E15B405C1D251FFB00AD0BFD /* AHGOrderStatusCell.m in Sources */,
 				E14428571D1BE7DF0081B78B /* AHGHomeApi.m in Sources */,
+				E15B40451D24FCDF00AD0BFD /* SlideHeadView.m in Sources */,
 				E16B0F281D1E9DBA00F4AFBF /* LZCartViewController.m in Sources */,
+				E15B40461D24FCDF00AD0BFD /* UIView+Extension.m in Sources */,
 				E15279D71D1CD6F80072E6B4 /* AHGInfoViewController.m in Sources */,
 				E16B0EFA1D1E774900F4AFBF /* AHGtimesCell.m in Sources */,
+				E15B40571D2506D000AD0BFD /* AHGOrderAllCell.m in Sources */,
 				E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */,
 				E16B0F041D1E962800F4AFBF /* AHGCarListCell.m in Sources */,
 				E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */,
+				E15B406B1D265E6C00AD0BFD /* AHGOrderListViewController.m in Sources */,
 				E15B400E1D2114FE00AD0BFD /* BaseTableViewController.m in Sources */,
 				E14428491D1B7C590081B78B /* Utile.m in Sources */,
 				E15B401B1D21323A00AD0BFD /* AHGChangePasswordViewController.m in Sources */,
+				E15B40371D2267D700AD0BFD /* AHGAddressHandleViewController.m in Sources */,
 				E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */,
 				E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */,
 				E16B0F1D1D1E9DBA00F4AFBF /* UIViewExt.m in Sources */,
 				E15B400F1D2114FE00AD0BFD /* CountDownButton.m in Sources */,
 				E144284F1D1BE7010081B78B /* BaseApi.m in Sources */,
+				E15B40651D264EC500AD0BFD /* AHGFillOrderViewController.m in Sources */,
 				E15279ED1D1D15540072E6B4 /* AHGProductDetailTableViewController.m in Sources */,
 				E15B400A1D2114FE00AD0BFD /* AHGForgetPasswordFirstViewController.m in Sources */,
+				E15B40601D252D1200AD0BFD /* AHGOrderFinishCell.m in Sources */,
 				E15279E51D1D14780072E6B4 /* AHGProductListViewController.m in Sources */,
 				E15711C21D1A3867007B5634 /* main.m in Sources */,
+				E15B40681D265D3900AD0BFD /* AHGorderListCell.m in Sources */,
+				E15B402E1D2245EB00AD0BFD /* AHGChangeAddressViewController.m in Sources */,
+				E15B404C1D24FF4700AD0BFD /* AHGOrderAllViewController.m in Sources */,
+				E15B40491D24FF0C00AD0BFD /* AHGOrderHomeViewController.m in Sources */,
+				E15B406E1D2663C400AD0BFD /* AHGPayStyleViewController.m in Sources */,
+				E15B40341D224D5400AD0BFD /* LZXPickerView.m in Sources */,
 				E16B0F271D1E9DBA00F4AFBF /* LZCartTableViewCell.m in Sources */,
 				E15B40151D211D0A00AD0BFD /* AHGMyInfoCenterViewController.m in Sources */,
 				E15B40091D2114FE00AD0BFD /* AHGLoginViewController.m in Sources */,
 				E16B0F261D1E9DBA00F4AFBF /* LZCartModel.m in Sources */,
 				E15711E81D1A7176007B5634 /* AHGHomeViewController.m in Sources */,
+				E15B404F1D24FF8000AD0BFD /* AHGOrderStatusViewController.m in Sources */,
+				E15B403B1D2267FA00AD0BFD /* AHGHandleCell.m in Sources */,
 				E15B400D1D2114FE00AD0BFD /* AHGRegisterViewController.m in Sources */,
 				E15B400B1D2114FE00AD0BFD /* AHGForgetPasswordSecondViewController.m in Sources */,
 				E15279E01D1CE73E0072E6B4 /* AHGHomeModel.m in Sources */,
+				E15B40521D25038000AD0BFD /* AHGOrderFinishViewController.m in Sources */,
 				E16B0F001D1E95D400F4AFBF /* AHGShopingCarViewController.m in Sources */,
 				E15B40181D21275A00AD0BFD /* AHGChangeNameViewController.m in Sources */,
 			);
