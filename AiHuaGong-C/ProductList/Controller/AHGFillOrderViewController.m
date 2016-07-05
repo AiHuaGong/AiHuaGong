@@ -1,7 +1,7 @@
 
 #import "AHGFillOrderViewController.h"
 
-@interface AHGFillOrderViewController ()<UITextViewDelegate>
+@interface AHGFillOrderViewController ()<UITextViewDelegate,UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UILabel *namePhone;
 @property (weak, nonatomic) IBOutlet UILabel *address;
@@ -17,12 +17,42 @@
 
 @implementation AHGFillOrderViewController
 
+/**
+ *  des 
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"填写订单";
     self.otherTextView.delegate = self;
-    _picAarray = [NSMutableArray arrayWithCapacity:5];
+    _picAarray = [NSMutableArray array];
+    for (int i = 0; i < 5; i++) {
+        NSString *string = [NSString stringWithFormat:@"%d",i];
+        [_picAarray addObject:string];
+    }
     
+    
+}
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self showPicAction];
+
+}
+-(void)showPicAction{
+    UIScrollView * sc = [[UIScrollView alloc]initWithFrame:_basePhotoView.bounds];
+    sc.delegate = self;
+    sc.directionalLockEnabled = YES;
+    [_basePhotoView addSubview:sc];
+    sc.backgroundColor = [UIColor whiteColor];
+    CGFloat margent = 8 ;
+    CGFloat viewHeight = CGRectGetHeight(_basePhotoView.frame) - margent* 2;
+    
+    for (int i = 0; i< _picAarray.count; i++) {
+        UIImageView * im = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"interesting_person"]];
+        im.frame = CGRectMake(margent +i * (margent + viewHeight) , margent, viewHeight, viewHeight);
+        [sc addSubview:im];
+    }
+    sc.contentSize = CGSizeMake(margent +_picAarray.count * (margent + viewHeight), viewHeight + margent * 2);
     
 }
 
@@ -54,7 +84,5 @@
     }
     return YES;
 }
-
-
 
 @end
