@@ -16,5 +16,5 @@
 @property(nonatomic, strong)NSArray * banArr;
 @property(weak, nonatomic) id<AHGHomeHeaderViewDelegate>delegate;
 @property(nonatomic, strong)JXBAdPageView * JXView;
--(id)initWithFrame:(CGRect)frame Array:(NSMutableArray*)arr;
+-(id)initWithFrame:(CGRect)frame Array:(NSMutableArray*)arr showBelow:(BOOL)bol;
 @end

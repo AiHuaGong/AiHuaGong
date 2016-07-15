@@ -17,9 +17,9 @@
 @property (nonatomic,assign) NSInteger number;
 @property (nonatomic,copy) NSString *price;
 //下面的属性可根据自己的需求修改
-@property (nonatomic,copy) NSString *sizeStr;
+//@property (nonatomic,copy) NSString *sizeStr;
 @property (nonatomic,copy) NSString *nameStr;
-@property (nonatomic,copy) NSString *dateStr;
+//@property (nonatomic,copy) NSString *dateStr;
 @property (nonatomic,retain)UIImage *image;
 
 @end

@@ -64,8 +64,8 @@
         model.price = @"100.00";
         model.number = 1;
         model.image = [UIImage imageNamed:@"interesting_person"];
-        model.dateStr = @"2016.02.18";
-        model.sizeStr = @"18*20cm";
+//        model.dateStr = @"2016.02.18";
+//        model.sizeStr = @"18*20cm";
         
         [self.dataArray addObject:model];
     }
@@ -442,7 +442,7 @@
 - (void)goToPayButtonClick:(UIButton*)button {
     if (self.selectedArray.count > 0) {
         for (LZCartModel *model in self.selectedArray) {
-            NSLog(@"选择的商品>>%@>>>%ld",model,(long)model.number);
+            NSLog(@"选择的商品>>%@>>>%ld----价钱%@",model,(long)model.number,model.price);
         }
     } else {
         NSLog(@"你还没有选择任何商品");

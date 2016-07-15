@@ -9,6 +9,7 @@
 #import "AHGTabBarViewController.h"
 #import "AHGLoginViewController.h"
 #import "AHGMyInfoCenterViewController.h"
+#import "AHGShopDetailViewController.h"
 @interface AHGHomeViewController ()<AHGHomeHeaderViewDelegate,UISearchBarDelegate,UISearchDisplayDelegate>{
     AHGHomeHeaderView * header;
 }
@@ -63,16 +64,13 @@
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         hud.hidden = YES;
         NSLog(@"数组一————%@ 数组二 ——————%@",_BannerArray,_ReStoreArray);
-        UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"个人中心"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
-        self.navigationItem.leftBarButtonItem = left;
-        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"拨号"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
-        self.navigationItem.rightBarButtonItem = right;
+
         if (_ReStoreArray.count > 0) {
            [self setFooterView];
         }
         CGRect ViewSize = [[UIScreen mainScreen]bounds];
         if (_BannerArray.count > 0) {
-            header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ViewSize.size.width, 300) Array:_BannerArray];
+            header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, ViewSize.size.width, 300) Array:_BannerArray showBelow:YES];
             header.delegate = self;
             //        [self searchAction];
             self.tableView.tableHeaderView = header;
@@ -90,6 +88,12 @@
     [self getDataAction];
     self.title = @"爱化工平台";
     self.disArray = [NSMutableArray arrayWithObjects:@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9", nil];
+    
+#warning 有接口的时候去掉，用回gcd那边的定义
+    UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"个人中心"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
+    self.navigationItem.leftBarButtonItem = left;
+    UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"拨号"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
+    self.navigationItem.rightBarButtonItem = right;
     
  }
 -(void)viewWillAppear:(BOOL)animated{
@@ -349,7 +353,11 @@
 }
 -(void)telAction{
     NSLog(@"打电话");
-    [Utile telActionWithPhoneNumber:@"13800138000"];
+//    [Utile telActionWithPhoneNumber:@"13800138000"];
+    AHGShopDetailViewController * de = [[AHGShopDetailViewController alloc]init];
+    de.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:de animated:YES];
+    
 
 }
 

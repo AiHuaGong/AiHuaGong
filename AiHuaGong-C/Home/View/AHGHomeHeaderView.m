@@ -2,11 +2,11 @@
 #import "AHGHomeHeaderView.h"
 #import "Utile.h"
 @implementation AHGHomeHeaderView
--(id)initWithFrame:(CGRect)frame Array:(NSMutableArray*)arr{
+-(id)initWithFrame:(CGRect)frame Array:(NSMutableArray*)arr showBelow:(BOOL)bol{
     if (self = [super initWithFrame:frame]) {
         self.frame = frame;
         self.banArr = arr;
-        [self setViewAction];
+        [self setViewAction:bol];
         self.backgroundColor = [UIColor groupTableViewBackgroundColor];
     }
     return self;
@@ -15,8 +15,9 @@
     [imgView sd_setImageWithURL:[NSURL URLWithString:imgUrl]];
 }
 
--(void)setViewAction{
-    _JXView = [[JXBAdPageView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.frame), 120)];
+-(void)setViewAction:(BOOL)bol{
+    _JXView = [[JXBAdPageView alloc] init];
+    _JXView.frame =CGRectMake(0, 0, CGRectGetWidth(self.frame), 0);
     _JXView.iDisplayTime = 2.0;
     _JXView.contentMode = UIViewContentModeScaleAspectFill;
     _JXView.delegate = self;
@@ -26,13 +27,17 @@
         NSString * str = [NSString stringWithFormat:@"%@%@",BASE_HEADER,list.ban_src];
         [picarray addObject:str];
     }
-    [_JXView startAdsWithBlock:picarray block:^(NSInteger clickIndex){
-        BanModel *model = [_banArr objectAtIndex:clickIndex];
-        if ([self.delegate respondsToSelector:@selector(BannerPicClicked:)]) {
-            [self.delegate BannerPicClicked:model.ban_id];
-        }
-        
-    }];
+    if (picarray.count > 0) {
+        _JXView.frame =CGRectMake(0, 0, CGRectGetWidth(self.frame), 120);
+        [_JXView startAdsWithBlock:picarray block:^(NSInteger clickIndex){
+            BanModel *model = [_banArr objectAtIndex:clickIndex];
+            if ([self.delegate respondsToSelector:@selector(BannerPicClicked:)]) {
+                [self.delegate BannerPicClicked:model.ban_id];
+            }
+            
+        }];
+    }
+    
     [self addSubview:_JXView];
     CGFloat margent = 10;
     CGFloat width = 60;
@@ -41,6 +46,10 @@
     buttonview.backgroundColor = [UIColor whiteColor];
     [self addSubview:buttonview];
     NSArray * arr = @[@"抢购",@"商品",@"指数",@"客服"];
+#warning 这里若是旺铺详情的headerview需要修改对应的文字和图片，现在太杂 实在不想改。确定再弄
+    if (bol == NO) {
+        
+    }
     CGFloat f = (self.frame.size.width - width * 4) / 5;
     
     for (int i = 0; i < 4; i++) {
@@ -65,10 +74,19 @@
     UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(0, margent*3 + width + 20, self.frame.size.width, 0.5)];
     label.backgroundColor = [UIColor lightGrayColor];
     [buttonview addSubview:label];
+    if (bol == NO) {
+        label.backgroundColor = [UIColor clearColor];
+        buttonview.frame = CGRectMake(0, CGRectGetMaxY(_JXView.frame) + margent, CGRectGetWidth(self.frame), width + 20 +margent * 3);
+        self.frame = CGRectMake(0, 0, self.frame.size.width, CGRectGetMaxY(buttonview.frame));
+//        buttonview.backgroundColor = [UIColor whiteColor];
+        return;
+    }
+
     
     UIImageView * imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"化工焦点"]];
     imageView.frame = CGRectMake(8, CGRectGetMinY(label.frame) + 5, imageView.image.size.width, imageView.image.size.height);
     [buttonview addSubview:imageView];
+    
     //跑马灯label
     UILabel *Slabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(imageView.frame) + 2 , CGRectGetMinY(imageView.frame) - 4, self.frame.size.width - imageView.frame.size.width + 30, 25)];
 //    Slabel.backgroundColor = [UIColor yellowColor];

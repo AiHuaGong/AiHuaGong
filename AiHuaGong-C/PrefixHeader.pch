@@ -23,5 +23,7 @@
 
 #define BASE_HEADER @"http://192.168.0.116/"
 #define VIEW_WIDTH [UIScreen mainScreen].applicationFrame.size.width
+#define VIEW_HEIGHT [UIScreen mainScreen].applicationFrame.size.height
+#define MARGENT_DIS 8.0
 #endif
 #endif /* PrefixHeader_pch */

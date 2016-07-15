@@ -25,9 +25,9 @@
 //商品名
 @property (nonatomic,retain) UILabel *nameLabel;
 //尺寸
-@property (nonatomic,retain) UILabel *sizeLabel;
-//时间
-@property (nonatomic,retain) UILabel *dateLabel;
+//@property (nonatomic,retain) UILabel *sizeLabel;
+////时间
+//@property (nonatomic,retain) UILabel *dateLabel;
 //价格
 @property (nonatomic,retain) UILabel *priceLabel;
 //数量
@@ -63,9 +63,9 @@
     self.lzImageView.image = model.image;
     self.nameLabel.text = model.nameStr;
     self.priceLabel.text = model.price;
-    self.dateLabel.text = model.dateStr;
+//    self.dateLabel.text = model.dateStr;
     self.numberLabel.text = [NSString stringWithFormat:@"%ld",(long)model.number];
-    self.sizeLabel.text = model.sizeStr;
+//    self.sizeLabel.text = model.sizeStr;
     self.selectBtn.selected = model.select;
 }
 
@@ -173,20 +173,20 @@
     self.nameLabel = nameLabel;
     
     //尺寸
-    UILabel* sizeLabel = [[UILabel alloc]init];
-    sizeLabel.frame = CGRectMake(nameLabel.left, nameLabel.bottom + 5, width, 20);
-    sizeLabel.textColor = LZColorFromRGB(132, 132, 132);
-    sizeLabel.font = [UIFont systemFontOfSize:12];
-    [bgView addSubview:sizeLabel];
-    self.sizeLabel = sizeLabel;
-    
-    //时间
-    UILabel* dateLabel = [[UILabel alloc]init];
-    dateLabel.frame = CGRectMake(nameLabel.left, sizeLabel.bottom , width, 20);
-    dateLabel.font = [UIFont systemFontOfSize:10];
-    dateLabel.textColor = LZColorFromRGB(132, 132, 132);
-    [bgView addSubview:dateLabel];
-    self.dateLabel = dateLabel;
+//    UILabel* sizeLabel = [[UILabel alloc]init];
+//    sizeLabel.frame = CGRectMake(nameLabel.left, nameLabel.bottom + 5, width, 20);
+//    sizeLabel.textColor = LZColorFromRGB(132, 132, 132);
+//    sizeLabel.font = [UIFont systemFontOfSize:12];
+//    [bgView addSubview:sizeLabel];
+//    self.sizeLabel = sizeLabel;
+//    
+//    //时间
+//    UILabel* dateLabel = [[UILabel alloc]init];
+//    dateLabel.frame = CGRectMake(nameLabel.left, sizeLabel.bottom , width, 20);
+//    dateLabel.font = [UIFont systemFontOfSize:10];
+//    dateLabel.textColor = LZColorFromRGB(132, 132, 132);
+//    [bgView addSubview:dateLabel];
+//    self.dateLabel = dateLabel;
     
     //数量加按钮
     UIButton *addBtn = [UIButton buttonWithType:UIButtonTypeCustom];

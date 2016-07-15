@@ -45,8 +45,7 @@
             }
         }
         url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-           NSLog(@"url=%@",url) ;
-//        NSString* testUrl=@"http://sportservicetest.y6.cn/config/initial?deviceToken=n%E6%88%91%E6%9D%A5%E6%B5%8B%E8%AF%95%E4%B8%AD" ;
+        NSLog(@"url=%@",url) ;
         [session GET:url parameters:nil success:success failure:failure];
         
     }else{

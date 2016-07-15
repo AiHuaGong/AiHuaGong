@@ -80,6 +80,8 @@
 		E16B0F261D1E9DBA00F4AFBF /* LZCartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F171D1E9DBA00F4AFBF /* LZCartModel.m */; };
 		E16B0F271D1E9DBA00F4AFBF /* LZCartTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F1A1D1E9DBA00F4AFBF /* LZCartTableViewCell.m */; };
 		E16B0F281D1E9DBA00F4AFBF /* LZCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E16B0F1C1D1E9DBA00F4AFBF /* LZCartViewController.m */; };
+		E174931C1D2E00CB00D073C3 /* AHGShopDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E174931B1D2E00CB00D073C3 /* AHGShopDetailViewController.m */; };
+		E17493201D2E27BE00D073C3 /* AHGProductView.m in Sources */ = {isa = PBXBuildFile; fileRef = E174931F1D2E27BE00D073C3 /* AHGProductView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -210,6 +212,10 @@
 		E16B0F1A1D1E9DBA00F4AFBF /* LZCartTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartTableViewCell.m; sourceTree = "<group>"; };
 		E16B0F1B1D1E9DBA00F4AFBF /* LZCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZCartViewController.h; sourceTree = "<group>"; };
 		E16B0F1C1D1E9DBA00F4AFBF /* LZCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZCartViewController.m; sourceTree = "<group>"; };
+		E174931A1D2E00CB00D073C3 /* AHGShopDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGShopDetailViewController.h; sourceTree = "<group>"; };
+		E174931B1D2E00CB00D073C3 /* AHGShopDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGShopDetailViewController.m; sourceTree = "<group>"; };
+		E174931E1D2E27BE00D073C3 /* AHGProductView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHGProductView.h; sourceTree = "<group>"; };
+		E174931F1D2E27BE00D073C3 /* AHGProductView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHGProductView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +341,7 @@
 		E15711BF1D1A3867007B5634 /* AiHuaGong-C */ = {
 			isa = PBXGroup;
 			children = (
+				E17493191D2DFA2F00D073C3 /* ShopDetail */,
 				E15B3FDD1D20CEE400AD0BFD /* Mine */,
 				E144284A1D1BE61B0081B78B /* HTTPApi */,
 				E14428461D1B7C590081B78B /* Helper */,
@@ -645,6 +652,25 @@
 			path = LZCartTableViewCell;
 			sourceTree = "<group>";
 		};
+		E17493191D2DFA2F00D073C3 /* ShopDetail */ = {
+			isa = PBXGroup;
+			children = (
+				E174931D1D2E06D700D073C3 /* view */,
+				E174931A1D2E00CB00D073C3 /* AHGShopDetailViewController.h */,
+				E174931B1D2E00CB00D073C3 /* AHGShopDetailViewController.m */,
+			);
+			path = ShopDetail;
+			sourceTree = "<group>";
+		};
+		E174931D1D2E06D700D073C3 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				E174931E1D2E27BE00D073C3 /* AHGProductView.h */,
+				E174931F1D2E27BE00D073C3 /* AHGProductView.m */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -801,6 +827,7 @@
 				E15711C51D1A3867007B5634 /* AppDelegate.m in Sources */,
 				E16B0F041D1E962800F4AFBF /* AHGCarListCell.m in Sources */,
 				E14428541D1BE7CA0081B78B /* BaseModel.m in Sources */,
+				E17493201D2E27BE00D073C3 /* AHGProductView.m in Sources */,
 				E15B406B1D265E6C00AD0BFD /* AHGOrderListViewController.m in Sources */,
 				E15B400E1D2114FE00AD0BFD /* BaseTableViewController.m in Sources */,
 				E14428491D1B7C590081B78B /* Utile.m in Sources */,
@@ -809,6 +836,7 @@
 				E16B0EF61D1E6FE900F4AFBF /* AHGTimeSalesViewController.m in Sources */,
 				E15711EE1D1A7985007B5634 /* AHGHomeHeaderView.m in Sources */,
 				E16B0F1D1D1E9DBA00F4AFBF /* UIViewExt.m in Sources */,
+				E174931C1D2E00CB00D073C3 /* AHGShopDetailViewController.m in Sources */,
 				E15B400F1D2114FE00AD0BFD /* CountDownButton.m in Sources */,
 				E144284F1D1BE7010081B78B /* BaseApi.m in Sources */,
 				E15B40651D264EC500AD0BFD /* AHGFillOrderViewController.m in Sources */,
