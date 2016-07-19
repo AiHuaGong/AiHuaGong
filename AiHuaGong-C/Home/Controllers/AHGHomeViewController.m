@@ -64,7 +64,10 @@
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
         hud.hidden = YES;
         NSLog(@"数组一————%@ 数组二 ——————%@",_BannerArray,_ReStoreArray);
-
+//        UIBarButtonItem * left = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"个人中心"] style:UIBarButtonItemStylePlain target:self action:@selector(showMyInfo)];
+//        self.navigationItem.leftBarButtonItem = left;
+//        UIBarButtonItem * right = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"拨号"] style:UIBarButtonItemStylePlain target:self action:@selector(telAction)];
+//        self.navigationItem.rightBarButtonItem = right;
         if (_ReStoreArray.count > 0) {
            [self setFooterView];
         }

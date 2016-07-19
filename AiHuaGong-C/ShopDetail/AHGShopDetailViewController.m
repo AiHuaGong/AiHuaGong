@@ -2,7 +2,8 @@
 #import "AHGShopDetailViewController.h"
 #import "AHGHomeHeaderView.h"
 #import "AHGProductView.h"
-@interface AHGShopDetailViewController ()
+#import "AHGShopProductsViewController.h"
+@interface AHGShopDetailViewController ()<AHGHomeHeaderViewDelegate>
 
 @end
 
@@ -13,10 +14,22 @@
     self.title = @"旺铺详情";
     NSMutableArray * arr= [NSMutableArray array];
     AHGHomeHeaderView * header = [[AHGHomeHeaderView alloc]initWithFrame:CGRectMake(0, 0, VIEW_WIDTH, 150) Array:arr showBelow:NO];
+    header.delegate = self;
     self.tableView.tableHeaderView = header;
     self.tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     [self creatFooterViewAction];
     
+}
+#pragma marks -AHGHomeHeaderViewDelegate
+
+-(void)clickedButtonWithTag:(NSInteger)buttonTag{
+    AHGShopProductsViewController * shop = [[AHGShopProductsViewController alloc]init];
+    [self.navigationController pushViewController:shop animated:YES];
+
+}
+-(void)BannerPicClicked:(NSInteger)BannerId{
+    
+
 }
 -(void)cilckedShowProduct:(UIButton*)bu{
     NSLog(@"点击了第---%ld",(long)bu.tag);

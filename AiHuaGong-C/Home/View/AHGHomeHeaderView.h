@@ -9,9 +9,11 @@
  *  @param buttonTag tag
  */
 -(void)clickedButtonWithTag:(NSInteger)buttonTag;
--(void)productButtonClicked;
 -(void)BannerPicClicked:(NSInteger)BannerId;
+@optional
+-(void)productButtonClicked;
 @end
+
 @interface AHGHomeHeaderView : UIView<JXBAdPageViewDelegate>
 @property(nonatomic, strong)NSArray * banArr;
 @property(weak, nonatomic) id<AHGHomeHeaderViewDelegate>delegate;
